@@ -1,0 +1,27 @@
+/** 
+  vuetify 최초에 호출되어 vuetify기본 scss의 변수에 override 해줍니다.
+  전역 scss의 $변수는 글자로 인식하나 :root 변수는 반영 됩니다.
+**/
+@use 'sass:math';
+@use 'vuetify/settings' with (
+  $body-font-family: var(--font-family),
+  $font-size-root: 16px,
+
+  $shades: (
+    'black': #666666,
+  ),
+  $red: (
+    'base': #FFCDD2,
+  ),
+  $blue: (
+    'base': #2962FF,
+  ),
+  $purple: (
+    'base': #673ab7,
+  ),
+
+  $button-height: 40px,
+  $button-plain-opacity: .8,
+  $button-font-size: 1rem,
+  $button-width-ratio: math.div(4, 2),
+);

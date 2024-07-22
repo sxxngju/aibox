@@ -1,0 +1,117 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+// layout ///////////////////////////////////////////////////////////////////
+$page-width: 1300px;
+$base-radius: 10px;
+$base-opacity: 0.4;
+$base-transition: all 500ms ease-in-out;
+$base-spacer: 10px !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// font setting ///////////////////////////////////////////////////////////
+$base-font-family: 'Spoqa Han Sans Neo', 'malgun gothic', '맑은 고딕', 'open sans', sans-serif !default;
+$base-line-height: 1.5 !default;
+$base-letter-spacing: -0.02rem !default;
+$font-size-base: 16px !default;
+$font-size-xxl: 24px !default;
+$font-size-xl: 24px !default;
+$font-size-lg: 20px !default;
+$font-size-md: 18px !default;
+$font-size-sm: 14px !default;
+$font-size-xsm: 12px !default;
+
+$drop-shadow-default: 6px 6px 12px 0 rgba(0, 0, 0, 0.075);
+$drop-shadow-layer: 8px 8px 12px 0px rgba(0, 0, 0, 0.15);
+$drop-shadow-card: 8px 8px 12px 0px rgba(0, 0, 0, 0.2);
+
+// color setting ////////////////////////////////////////////////////////////
+$white: #fff !default;
+$black: #000 !default;
+
+$color-gray-50: #fbfbfb !default;
+$color-gray-100: #f9f9f9 !default;
+$color-gray-200: #f0f2f3 !default;
+$color-gray-300: #ccd1d6 !default;
+$color-gray-400: #bec3c7 !default;
+$color-gray-500: #9ea4a9 !default;
+$color-gray-600: #74777d !default;
+$color-gray-700: #464b53 !default;
+$color-gray-800: #363739 !default;
+$color-gray-900: #202223 !default;
+
+// theme color
+$color-primary: #ff5838 !default;
+$color-secondary: #578df5 !default;
+$color-tertiary: #00caa6 !default;
+$color-disabled: #bec3c7 !default;
+$color-error: $color-primary !default;
+$color-yellow: #ffce22 !default;
+$color-orange: #ff8b00 !default;
+$color-mint: #00caa6 !default;
+
+// text
+$color-text-default: $color-gray-800;
+$color-text-sub: $color-gray-600;
+$color-text-sub2: $color-gray-500;
+$color-text-dark: #252525 !default;
+
+// bg
+$color-bg-default: #fafafa !default;
+$color-bg-hover: #f5faff !default;
+$color-bg-footer: #efefef !default;
+$color-bg-yellow: #fff8e1 !default;
+$color-bg-gray: #f8f8f8 !default;
+$color-btn-active: $color-gray-800;
+
+// border
+$color-border-default: #bbbdc1;
+$color-border-light: #dddfe3;
+$color-border-dark: $color-gray-700;
+
+//gutter setting
+$base-gutter: $base-spacer !default; //현재 10px
+$spacer-list: $base-gutter * 4 !default; //table ul ...
+$spacer-section: $base-gutter * 8 !default; //block 단위 구분
+$spacer-inline: 5px !default; //inline 요소 구분
+$spacer-gutter: 10px !default;
+
+// zindex setting /////////////////////////////////////////////////////////
+$z-index-badge: 10;
+$z-index-tooltip: 10;
+$z-index-header: 100;
+$z-index-layer: 101; //dimd 사용하지 않는 레이어
+$z-index-dimd: 1000;
+$z-index-popup: 1001;
+$z-index-alert: 9999;
+$z-index-toast: 10000;
+
+// input values
+$input-font-size: $font-size-sm;
+$input-border-radius: $base-radius;
+$input-file-inner-button-width: 155px;
+$color-border-input-active: $color-gray-700;
+
+// form values
+$form-spacer: 20px;
+
+// policyBox values
+$policy-box-padding: 30px;
+
+// btn values
+$btn-min-width-default: 120px;
+$btn-min-width-small: 62px;
+$btn-min-width-large: 146px;
+$btn-inner-padding-small: 20px;
+$btn-inner-padding-default: 20px;
+$btn-inner-padding-large: 40px;
+
+// checkbox values
+$color-border-checkbox: #cacdd3;

@@ -1,0 +1,14 @@
+.policyBox {
+  padding: $policy-box-padding;
+  margin-bottom: $base-spacer * 2;
+  background-color: $color-bg-default;
+  border-radius: $input-border-radius;
+  border: 1px solid $color-border-light;
+  font-size: $input-font-size;
+  color: $color-text-default;
+  .scroll-inner {
+    max-height: 182px;
+    padding-right: $base-spacer * 3;
+    overflow-y: scroll;
+  }
+}

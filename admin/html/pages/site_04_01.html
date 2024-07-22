@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>관리자</title>
+        <meta name="title" content="관리자" />
+        <meta name="keywords" content="관리자" />
+        <meta name="description" content="관리자" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../../css/lib/style.css" />
+        <link rel="stylesheet" href="../../css/lib/style/index.css" />
+
+        <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+        <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+        <script src="../../js/lib/ui.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- header -->
+            <header class="header">
+                <div class="header-inner">
+                    <!-- header-top -->
+                    <div class="header-top">
+                        <div class="btn-ht sideMenu">
+                            <button type="button" class="btn">
+                                <i class="bi bi-list"><span class="skip">메뉴 열고 닫기</span></i>
+                            </button>
+                        </div>
+                        <div class="logo">
+                            <a href="#">
+                                <h1 class="logo"><img src="../../img/logo-vertical.svg" alt="logo" /></h1
+                            ></a>
+                        </div>
+                        <!-- <div class="btn-group util">
+                            <div class="btn-ht logout">
+                            <button type="button" class="btn"><i class="bi bi-box-arrow-right"><span class="skip">로그아웃</span></i></button>
+                        </div>
+                            <div class="btn-ht sideQuick">
+                                <button type="button" class="btn">
+                                    <i class="bi bi-three-dots-vertical"><span class="skip">퀵메뉴 열고 닫기</span></i>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- //header-top -->
+
+                    <!-- nav-->
+                    <nav class="nav align-items-center">
+                        <ul class="nav-inner">
+                            <li class="nav-item"><a href="./index.html">HOME</a></li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./member_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >회원관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./member_01.html">회원관리</a>
+                                        <a class="dropdown-item" href="./member_02.html">신고</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <div class="dropdown dropdownH">
+                                    <a class="btn dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"
+                                        >사이트관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./site_01.html">메인</a>
+                                        <a class="dropdown-item" href="./site_02.html">이용약관</a>
+                                        <a class="dropdown-item" href="./site_03.html">개인정보처리방침</a>
+                                        <a class="dropdown-item" href="./site_04.html">개인정보수집동의</a>
+                                        <a class="dropdown-item" href="./site_05.html">자주하는 질문</a>
+                                        <a class="dropdown-item" href="./site_06.html">제휴/문의</a>
+                                        <a class="dropdown-item" href="./site_07.html">팝업</a>
+                                        <a class="dropdown-item" href="./site_08.html">공지</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./data_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >데이터관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./data_01.html">받아쓰기</a>
+                                        <a class="dropdown-item" href="./data_03.html">금지어 관리</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./studio_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >스튜디오</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./studio_01.html">스튜디오</a>
+                                        <a class="dropdown-item" href="./studio_01_01.html">만들기</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="./authority_01.html">권한관리</a></li>
+                        </ul>
+                        <div class="nav-user ml-auto">
+                            <a href="./studio_01_01.html" class="btn btn-primary btn-large">스튜디오 만들기</a>
+                            <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn dropdown-toggle">
+                                <img src="../../img/icon-user.svg" alt="user" />
+                                <div class="dropdown-menu logout">
+                                    <a class="dropdown-item" href="#">내 정보</a>
+                                    <a class="dropdown-item" href="./login.html" target="_self">로그아웃</a>
+                                </div>
+                            </button>
+                        </div>
+                    </nav>
+                    <!-- //nav-->
+                </div>
+            </header>
+            <!-- //header -->
+
+            <!-- container -->
+            <div class="container">
+                <div class="container-inner">
+                    <!-- sidemenu -->
+                    <aside class="side">
+                        <div class="side-inner">
+                            <h2 class="title">사이트관리</h2>
+                            <ul>
+                                <li class="side-item"><a href="./site_01.html">메인</a></li>
+                                <li class="side-item"><a href="./site_02.html">이용약관</a></li>
+                                <li class="side-item"><a href="./site_03.html">개인정보처리방침</a></li>
+                                <li class="side-item active"><a href="./site_04.html">개인정보수집동의</a></li>
+                                <li class="side-item"><a href="./site_05.html">자주하는 질문</a></li>
+                                <li class="side-item">
+                                    <a href="./site_06.html">제휴/문의 <strong class="num text-primary">2</strong></a>
+                                </li>
+                                <li class="side-item"><a href="./site_07.html">팝업</a></li>
+                                <li class="side-item"><a href="./site_08.html">공지</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- //sidemenu -->
+
+                    <!-- content -->
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="page-title d-flex mb-3">
+                                <h2 class="title flex-grow-1">개인정보 수집 및 이용동의 <span class="text-primary">등록/수정</span></h2>
+                                <p class="breadcrumbs">사이트관리>개인정보수집동의>등록</p>
+                            </div>
+
+                            <!-- table -->
+                            <p class="ml-3">*는 필수 입력정보</p>
+                            <table class="table table-type2 text-center mb-0">
+                                <colgroup>
+                                    <col style="width: 10%" />
+                                    <col style="width: 40%" />
+                                    <col style="width: 10%" />
+                                    <col style="width: 40%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="text-left">등록/수정자</th>
+                                        <td class="text-left">등록자(아이디)<br />수정자(아이디)</td>
+                                        <th scope="row" class="text-left">등록/수정일시</th>
+                                        <td class="text-left">2000-00-00 00:00:00<br />2000-00-00 00:00:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-left">게시여부</th>
+                                        <td colspan="6">
+                                            <div class="d-flex align-items-center">
+                                                <form class="d-flex col-auto">
+                                                    <label class="form-raido"
+                                                        ><input type="radio" name="radio" id="" checked="checked" />
+                                                        <span>게시 안함</span></label
+                                                    >
+                                                    <label class="form-raido"
+                                                        ><input type="radio" name="radio" id="" /> <span>게시</span></label
+                                                    >
+                                                </form>
+                                                <!-- <div class="btn-group btn-group-lg auto align-items-center">
+                                                    <button type="button" class="btn">현재</button>
+                                                    <span>|</span>
+                                                    <button type="button" class="btn">예약</button>
+                                                </div>
+                                                <input type="text" class="form-control datepicker w-auto" placeholder="게시일자" /> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-left">제목*</th>
+                                        <td colspan="6">
+                                            <div class="form-calendar">
+                                                <input type="text" class="form-control datepicker" placeholder="시행일자" />
+                                                <span>~</span>
+                                                <input type="text" class="form-control datepicker" placeholder="종료일자" />
+                                                <p class="text-secondary text-right col-8 align-self-center">
+                                                    제목은 시행일로 입력해주세요.
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- //table -->
+
+                            <!-- editor : 에디터가 들어갑니다. -->
+                            <div class="chart mb-4">에디터가 들어갑니다.</div>
+                            <!-- //editor -->
+
+                            <div class="btn-group auto">
+                                <button type="button" class="btn btn-large btn-dark" data-toggle="modal" data-target="#alert">저장</button>
+                                <!-- 미리보기 버튼 클릭 시 [서비스화면] 미리보기 새 탭 출력 -->
+                                <button type="button" class="btn btn-large btn-outline-dark">미리보기</button>
+                                <button type="button" class="btn btn-large btn-outline-dark" data-toggle="modal" data-target="#alert7">
+                                    목록으로
+                                </button>
+                            </div>
+
+                            <!-- alert1 : 저장 버튼 case(1/6) || 현재일로 정상 등록했을 때 -->
+                            <div class="modal fade" id="alert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center mt-4">정상 등록되었습니다.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- alert2 : 저장 버튼 case(2/6) || 예약일로 정상 등록했을 때 -->
+                            <div class="modal fade" id="alert2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center mt-4">(예약일)에 게시가 예약되었습니다.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- alert3 : 저장 버튼 case(3/6) || 게시 안함으로 등록했을 때 -->
+                            <div class="modal fade" id="alert3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center mt-4">게시 안함으로 저장되었습니다.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- alert4 : 저장 버튼 case(4/6) || 예약일 미설정으로 실패했을 때 -->
+                            <div class="modal fade" id="alert4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center mt-4">게시일자를 입력해주세요.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- alert5 : 저장 버튼 case(5/6) || 제목 시행일자 미입력으로 실패했을 때 -->
+                            <div class="modal fade" id="alert5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center mt-4">시행일자를 입력해주세요.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- alert6 : 저장 버튼 case(6/6) || 내용 미입력으로 실패했을 때 -->
+                            <div class="modal fade" id="alert6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center mt-4">내용을 입력해주세요.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- alert7 : 목록으로 버튼 case(1/1) || 작성 혹은 변경 내용 있을 때 -->
+                            <div class="modal fade" id="alert7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p class="text-center mt-4">변경된 내용이 있습니다. 취소하고 이동 하시겠어요?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //content -->
+
+                    <!-- side-quick -->
+                    <!-- <div class="side-quick">
+                    <div class="side-quick-inner">
+                        <div class="login-info">
+                            <div class="sq-item login-name">홍길동<span>님</span></div>
+                            <div class="btn-sq"><button type="button" class="btn">로그아웃</button></div>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- //side-quick -->
+                </div>
+            </div>
+            <!-- //container -->
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-inner">
+                    <div class="copyright">Copyrights © 2023 eutopos, co.ltd. All rights Reserved.</div>
+                </div>
+            </footer>
+            <!-- //footer -->
+        </div>
+    </body>
+</html>

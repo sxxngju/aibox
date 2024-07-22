@@ -1,0 +1,73 @@
+/* size default */
+.v-input {
+  position: relative;
+  &.v-input--size-default {
+    --v-input-control-height: var(--root-input-height-default);
+    box-sizing: border-box;
+
+    .v-field {
+      font-size: $input-font-size;
+    }
+
+    .v-field__input {
+      min-height: var(--v-input-control-height);
+    }
+  }
+
+  /* size small */
+  &.v-input--size-small {
+    --v-input-control-height: var(--root-input-height-small);
+    box-sizing: border-box;
+
+    .v-field {
+      font-size: $font-size-sm;
+    }
+
+    .v-field__input {
+      --v-field-input-padding-top: var(--root-input-padding-top-small);
+      --v-field-input-padding-bottom: var(--root-input-padding-bottom-small);
+      min-height: var(--v-input-control-height);
+    }
+  }
+
+  /* size large */
+  &.v-input--size-large {
+    --v-input-control-height: var(--root-input-height-large);
+    box-sizing: border-box;
+
+    .v-field {
+      font-size: $font-size-base;
+    }
+
+    .v-field__input {
+      /* 임의 사이즈 */
+      min-height: var(--v-input-control-height);
+    }
+  }
+
+  /* details */
+  div.v-input__details {
+    position: absolute;
+    top: 100%;
+    // left: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    line-height: $base-line-height;
+    padding: 0;
+    padding-inline: 0;
+    font-size: $font-size-xsm;
+    letter-spacing: $base-letter-spacing;
+
+    .v-messages__message:not(:empty) {
+      display: inline-block;
+      padding: $base-spacer var(--root-input-padding-start);
+      background-color: rgba($white, 0.7);
+    }
+  }
+}
+
+.extra {
+  margin-left: auto;
+}

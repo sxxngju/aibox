@@ -1,0 +1,10 @@
+/**
+  전역 scss에 포함된 scss 변수 variables은 
+  components vue 페이지 하단에 import된 scss에서 반영 되지 않습니다.
+  그러나 root 변수는 호출이 되어 반영 됩니다.
+**/
+@import 'fonts';
+@import 'root-variables';
+@import 'reset';
+@import 'typography';
+@import 'form';

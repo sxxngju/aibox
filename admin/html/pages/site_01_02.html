@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>관리자</title>
+    <meta name="title" content="관리자">
+    <meta name="keywords" content="관리자">
+    <meta name="description" content="관리자">
+    <link rel="stylesheet" href="../../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/lib/style.css">
+    <link rel="stylesheet" href="../../css/lib/style/index.css">
+
+    <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/lib/ui.js"></script>
+    
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+    <script>
+    $( function() {
+      $('#sortable').sortable({
+        handle : 'td',
+        helper: function(e, ui) {
+          ui.children().each(function() {
+            $(this).width($(this).width()).css('background', '#ffffff');
+          });
+          return ui;
+        }
+      }).disableSelection();
+    });
+
+    $(function(){
+      $('.main-list').sortable().disableSelection();
+    });
+  </script>
+  </head>
+  <body>
+
+    <div class="wrap">
+        <!-- header -->
+        <header class="header">
+          <div class="header-inner">
+  
+              <!-- header-top -->
+              <div class="header-top">
+                  <div class="btn-ht sideMenu">
+                      <button type="button" class="btn"><i class="bi bi-list"><span class="skip">메뉴 열고 닫기</span></i></button>
+                  </div>
+                  <div class="logo">
+                      <a href="#"> <h1 class="logo"><img src="../../img/logo-vertical.svg" alt="logo" /></h1></a>
+                  </div>
+                  <!-- <div class="btn-group util">
+                      <div class="btn-ht logout">
+                          <button type="button" class="btn"><i class="bi bi-box-arrow-right"><span class="skip">로그아웃</span></i></button>
+                      </div>
+                      <div class="btn-ht sideQuick">
+                          <button type="button" class="btn"><i class="bi bi-three-dots-vertical"><span class="skip">퀵메뉴 열고 닫기</span></i></button>
+                      </div>
+                  </div> -->
+              </div>
+              <!-- //header-top -->
+  
+              <!-- nav-->
+              <nav class="nav align-items-center">
+                  <ul class="nav-inner">
+                      <li class="nav-item"><a href="./index.html">HOME</a></li>
+                      <li class="nav-item">
+                          <div class="dropdown dropdownH">
+                              <a class="btn dropdown-toggle" href="./member_01.html" role="button" data-toggle="dropdown" aria-expanded="false">회원관리</a>
+                              <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="./member_01.html">회원관리</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="nav-item active">
+                          <div class="dropdown dropdownH">
+                              <a class="btn dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">사이트관리</a>
+                              <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="./site_01.html">메인</a>
+                                  <a class="dropdown-item" href="./site_02.html">이용약관</a>
+                                  <a class="dropdown-item" href="./site_03.html">개인정보처리방침</a>
+                                  <a class="dropdown-item" href="./site_04.html">개인정보수집동의</a>
+                                  <a class="dropdown-item" href="./site_05.html">자주하는 질문</a>
+                                  <a class="dropdown-item" href="./site_06.html">제휴/문의</a>
+                                  <a class="dropdown-item" href="./site_07.html">팝업</a>
+                                  <a class="dropdown-item" href="./site_08.html">공지</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="dropdown dropdownH">
+                              <a class="btn dropdown-toggle" href="./data_01.html" role="button" data-toggle="dropdown" aria-expanded="false">데이터관리</a>
+                              <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="./data_01.html">받아쓰기</a>
+                                  <a class="dropdown-item" href="./data_03.html">금지어 관리</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="dropdown dropdownH">
+                              <a class="btn dropdown-toggle" href="./studio_01.html" role="button" data-toggle="dropdown" aria-expanded="false">스튜디오</a>
+                              <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="./studio_01.html">스튜디오</a>
+                                  <a class="dropdown-item" href="./studio_01_01.html">만들기</a>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="nav-item"><a href="./authority_01.html">권한관리</a></li>
+                  </ul>
+                  <div class="nav-user ml-auto">
+                      <a href="./studio_01.html" class="btn btn-primary btn-large">스튜디오 만들기</a>
+                      <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn dropdown-toggle">
+                        <img src="../../img/icon-user.svg" alt="user" />
+                        <div class="dropdown-menu logout">
+                            <a class="dropdown-item" href="#">내 정보</a>
+                            <a class="dropdown-item" href="./login.html" target="_self">로그아웃</a>
+                        </div>
+                    </button>
+                  </div>
+              </nav>
+              <!-- //nav-->
+  
+          </div>
+      </header>
+      <!-- //header -->
+
+        <!-- container -->
+        <div class="container">
+            <div class="container-inner">
+                <!-- sidemenu -->
+                <aside class="side">
+                    <div class="side-inner">
+                        <h2 class="title">사이트관리</h2>
+                        <ul>
+                            <li class="side-item active"><a href="#">메인</a></li>
+                            <li class="side-item"><a href="./site_02.html">이용약관</a></li>
+                            <li class="side-item"><a href="./site_03.html">개인정보처리방침</a></li>
+                            <li class="side-item"><a href="./site_04.html">개인정보수집동의</a></li>
+                            <li class="side-item"><a href="./site_05.html">자주하는 질문</a></li>
+                            <li class="side-item"><a href="./site_06.html">제휴/문의 <strong class="num text-primary">2</strong></a></li>
+                            <li class="side-item"><a href="./site_07.html">팝업</a></li>
+                            <li class="side-item"><a href="./site_08.html">공지</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- //sidemenu -->
+
+                <!-- content -->
+                <div class="content">
+                    <div class="content-inner">
+                        <div class="page-title d-flex mb-3">
+                            <h2 class="title flex-grow-1">메인</h2>
+                            <p class="breadcrumbs">사이트관리>메인</p>
+                        </div>
+
+                        <!-- tab -->
+                        <div class="table-top d-flex flex-column">
+                          <div class="d-flex align-items-center mb-4">
+                              <a href="#" class="btn text-primary font-weight-bold px-3 mr-0">인기 콘텐츠</a>
+                              <span class="font12">|</span>
+                              <a href="./site_01_02.html" class="btn px-3 mr-0">추천 AI서비스</a>  
+                              <span class="font12">|</span>
+                              <a href="./site_01_03.html" class="btn px-3 mr-0">업무경감</a>
+                              <div class="flex-grow-1 text-right">
+                                <button type="button" class="btn btn-setting" data-toggle="modal" data-target="#popup"><img src="../../img/icon-setting.png" alt=""></button>
+                              </div>
+                          </div>
+                          <div class="btn-group btn-group-lg type1 auto mb-2">
+                            <!-- 선택된 내용이 있을 시에만 alert 출력 -->
+                            <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#alert">선택제외</button>
+                            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#popup2">등록</button>
+                          </div>
+                        </div>
+
+                        <!-- table -->
+                        <table class="table table-type2 text-center line">
+                            <colgroup>
+                              <col style="width: 5%;">
+                              <col style="width: 7%;">
+                              <col style="width: 10%;">
+                              <col style="width: 10%;">
+                              <col style="width: 10%;">
+                              <col style="width: 7%;">
+                              <col style="width: 10%;">
+                              <col style="width: auto;">
+                              <col style="width: 10%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col"><label class="form-check center"><input type="checkbox" name="" id=""></label></th>
+                                    <th scope="col">노출순서</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">썸네일</th>
+                                    <th scope="col">사이트/출처</th>
+                                    <th scope="col">라벨</th>
+                                    <th scope="col">생성</th>
+                                    <th scope="col">메인 노출일시</th>
+                                    <th scope="col">순서변경</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sortable">
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id="" checked="checked"></label></td>
+                                    <td>1</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">받아쓰기</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>아이스크림</td>
+                                    <td><span class="badge fill-primary">인기</span></td>
+                                    <td>1,234</td>
+                                    <td>등록일시</td>
+                                    <td><button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button></td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id="" checked="checked"></label></td>
+                                    <td>2</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">컬러링</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>아이스크림</td>
+                                    <td><span class="badge fill-primary">인기</span></td>
+                                    <td>1,234</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id="" checked="checked"></label></td>
+                                    <td>3</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">AI 매일수학</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>아이스크림</td>
+                                    <td><span class="badge fill-success">신규</span></td>
+                                    <td>1,234</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id=""></label></td>
+                                    <td>4</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">교과평어</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>아이스크림</td>
+                                    <td><span class="badge fill-success">신규</span></td>
+                                    <td>0</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id=""></label></td>
+                                    <td>5</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">행동발달</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>아이스크림</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id=""></label></td>
+                                    <td>6</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">이미지 생성</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>아이스크림</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id=""></label></td>
+                                    <td>7</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">가정통신문</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>아이스크림</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id=""></label></td>
+                                    <td>8</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">누구든 AI</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>누구든 AI</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label class="form-check center"><input type="checkbox" name="" id=""></label></td>
+                                    <td>9</td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">사이트 또는 콘텐츠 제목</td>
+                                    <td><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td>사이트 / 출처</td>
+                                    <td>-</td>
+                                    <td>0</td>
+                                    <td>2000-00-00 00:00:00</td>
+                                    <td>
+                                      <button type="button" class="btn revese"><img src="../../img/icon_arrow_down.svg" alt="icon_arrow_down"></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //table -->
+
+                        <!-- 리스트 순서 변동 있을 때만 버튼 노출 -->
+                        <div class="btn-group auto center">
+                          <button type="button" class="btn btn-large btn-dark">저장</button>
+                          <button type="button" class="btn btn-large btn-outline-dark">취소</button>
+                        </div>
+
+                        <!-- 기본상태 : 접기 -->
+                        <div class="table-wrap">
+                          <button type="button" class="btn mb-3 btn-toggle"><span class="pr-1">게시 안함 콘텐츠 보기</span> <img src="../../img/icon_arrow_down.svg" alt=""></button>
+                          <table class="table table-type2 table-ex">
+                            <colgroup>
+                              <col style="width: 5%;">
+                              <col style="width: 7%;">
+                              <col style="width: 10%;">
+                              <col style="width: 10%;">
+                              <col style="width: 10%;">
+                              <col style="width: 7%;">
+                              <col style="width: 10%;">
+                              <col style="width: auto;">
+                              <col style="width: 10%;">
+                          </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td><span class="blind">blink</span></td>
+                                    <td><span class="blind">blink</span></td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">기획서 AI</td>
+                                    <td class="text-center"><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td class="text-center">아이스크림</td>
+                                    <td class="text-center"><span class="badge fill-success">신규</span></td>
+                                    <td class="text-center">1,234</td>
+                                    <td class="text-center">2000-00-00 00:00:00</td>
+                                    <td class="text-center"><button type="button" class="btn btn-outline-secondary">게시</button></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="blind">blink</span></td>
+                                    <td><span class="blind">blink</span></td>
+                                    <td class="text-left pointer" data-toggle="modal" data-target="#popup2">사이트 또는 콘텐츠 제목</td>
+                                    <td class="text-center"><img src="https://picsum.photos/100" alt="thumbnail" class="thumbnail"></td>
+                                    <td class="text-center">아이스크림</td>
+                                    <td class="text-center">-</td>
+                                    <td class="text-center">1,234</td>
+                                    <td><span class="blind">blink</span></td>
+                                    <td class="text-center"><button type="button" class="btn btn-outline-secondary">게시</button></td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- //content -->
+
+                <!-- side-quick -->
+                <!-- <div class="side-quick">
+                    <div class="side-quick-inner">
+                        <div class="login-info">
+                            <div class="sq-item login-name">홍길동<span>님</span></div>
+                            <div class="btn-sq"><button type="button" class="btn">로그아웃</button></div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- //side-quick -->
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="copyright"> Copyrights © 2023 eutopos, co.ltd. All rights Reserved.</div>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- popup : 메인 영역 관리 창 -->
+        <div class="modal fade" id="popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+              <div class="modal-header modal-default">
+                  <h5 class="modal-title pl-0" id="exampleModalLabel">메인 영역 관리</h5>
+              </div>
+              <div class="modal-body">
+                <!-- 입력창 -->
+                <div class="d-flex">
+                  <input type="text" class="form-control resize" name="" id="" placeholder="영역 이름 입력 최대 20자">
+                  <button type="submit" class="btn btn-lg btn-dark">추가</button>
+                </div>
+                <!-- 리스트 -->
+                <ul class="main-list">
+                  <li class="d-flex align-items-center">
+                    <input class="flex-grow-1" type="text" contenteditable="true" placeholder="추천 AI" readonly />
+                    <div class="btn-group btn-group-lg type3">
+                      <button type="button" class="btn btn-secondary mr-0">on</button>
+                      <button type="button" class="btn btn-outline-secondary">off</button>
+                    </div>
+                    <!-- delete icon -->
+                    <button type="button" class="btn ml-1 blind"><img src="../../img/icon-trash.svg" alt="delete"></button>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input class="flex-grow-1" type="text" contenteditable="true" placeholder="AI 스토어" readonly />
+                    <div class="btn-group btn-group-lg type3">
+                      <button type="button" class="btn btn-secondary mr-0">on</button>
+                      <button type="button" class="btn btn-outline-secondary">off</button>
+                    </div>
+                    <!-- delete icon -->
+                    <button type="button" class="btn ml-1 blind"><img src="../../img/icon-trash.svg" alt="delete"></button>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input class="flex-grow-1 renewable" type="text" contenteditable="true" placeholder="테스트" />
+                    <div class="btn-group btn-group-lg type3">
+                      <button type="button" class="btn btn-outline-secondary mr-0">on</button>
+                      <button type="button" class="btn btn-secondary">off</button>
+                    </div>
+                    <!-- delete icon : 등록된 콘텐츠 있을 시 alert, 없을 경우 삭제 / 추천 AI와 AI 스토어 삭제 불가  -->
+                    <button type="button" class="btn ml-1" data-toggle="modal" data-target="#alert2"><img src="../../img/icon-trash.svg" alt="delete"></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-large btn-dark">확인</button>
+                  <button type="button" class="btn btn-large btn-outline-secondary" data-dismiss="modal">취소</button>
+              </div>
+              </div>
+          </div>
+        </div>
+        <!-- //popup -->
+
+        <!-- popup2 : 메인 콘텐츠 등록 창 -->
+      <div class="modal fade" id="popup2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-header modal-default">
+              <h5 class="modal-title pl-0" id="exampleModalLabel">메인 콘텐츠 등록</h5>
+            </div>
+            <div class="modal-body">
+              <ul class="main-contents-list">
+                <li>
+                  <p>게시여부</p>
+                  <div class="d-flex">
+                    <label class="form-raido"><input type="radio" name="radio1" id=""> <span>게시 안함</span></label>
+                    <label class="form-raido"><input type="radio" name="radio1" id=""> <span>게시</span></label>
+                  </div>
+                </li>
+                <li>
+                  <p>위치</p>
+                  <div class="d-flex flex-wrap">
+                    <label class="form-raido"><input type="radio" name="radio2" id=""> <span>인기 콘텐츠</span></label>
+                    <label class="form-raido"><input type="radio" name="radio2" id=""> <span>추천 AI서비스</span></label>
+                    <label class="form-raido"><input type="radio" name="radio2" id=""> <span>AI 콘텐츠</span></label>
+                    <label class="form-raido"><input type="radio" name="radio2" id=""> <span>인기 서비스</span></label>
+                    <label class="form-raido"><input type="radio" name="radio2" id=""> <span>AI 서비스</span></label>
+                    <label class="form-raido"><input type="radio" name="radio2" id=""> <span>콘텐츠</span></label>
+                  </div>
+                </li>
+                <!-- <li>
+                  <p>라벨</p>
+                  <div class="btn-group auto">
+                    <button type="button" class="btn btn-outline-dark">없음</button>
+                    <button type="button" class="btn btn-primary">인기</button>
+                    <button type="button" class="btn btn-success">신규</button>
+                    <button type="button" class="btn btn-danger">스페셜</button>
+                  </div>
+                  <div class="d-flex">
+                    <label class="form-raido"><input type="radio" name="radio3" id="" checked="checked"> <span>없음</span></label>
+                    <label class="form-raido"><input type="radio" name="radio3" id=""> <span>인기</span></label>
+                    <label class="form-raido"><input type="radio" name="radio3" id=""> <span>신규</span></label>
+                    <label class="form-raido"><input type="radio" name="radio3" id=""> <span>스페셜</span></label>
+                  </div>
+                </li> -->
+                <li>
+                  <p>제목*</p>
+                  <input type="text" class="form-control" name="" id="" placeholder="제목을 입력하세요. 최대 20자까지">
+                </li>
+                <li>
+                  <p>소개</p>
+                  <textarea class="form-control mr-0" name="" id="" rows="5" placeholder="소개를 입력하세요. 최대 100자까지"></textarea>
+                </li>
+                <li>
+                  <p>이미지 추가</p>
+                  <div class="input-group align-items-center">
+                    <div class="custom-file upload-custom-file">
+                        <input type="file" class="custom-file-input" id="">
+                        <label class="custom-file-label" for="">이미지파일명.확장자(파일크기)</label>
+                    </div>
+                    <button type="button" class="btn"><img src="../../img/icon-plus.svg" alt="delete"></button>
+                  </div>
+                </li>
+                <li>
+                  <p>링크</p>
+                  <!-- 입력한 주소로 링크 확인 되도록 해주세요. -->
+                  <form onsubmit="window.open(document.querySelector('.link').value, 'resizable scrollbars menubar=yes'); return false;">
+                    <input type="text" class="form-control link" name="" id="" placeholder="http를 포함 전체 url을 입력해주세요.">
+                    <button type="button" value="새 창 열림" onclick="window.open(document.querySelector('.link').value, 'resizable scrollbars menubar=yes'); return false;" class="btn btn-outline-secondary">링크확인</button>
+                  </form>
+                </li>
+                <li>
+                  <p>사이트/출처</p>
+                  <input type="text" class="form-control" name="" id="" placeholder="최대 20자까지">
+                </li>
+                <!-- 수정에서만 노출 -->
+                <li>
+                  <p>등록/수정자</p>
+                  <p>김철수</p>
+                </li>
+                <li>
+                  <p>등록/수정일</p>
+                  <p>2000-00-00 00:00:00</p>
+                </li>
+                <!-- // 수정에서만 노출 -->
+              </ul>
+            </div>
+            <div class="modal-footer">
+                <!-- 클릭 시 필수 입력 정보 체크, 입력값 없을 시 alert -->
+                <button type="button" class="btn btn-large btn-dark" data-toggle="modal" data-target="#alert3">확인</button>
+                <button type="button" class="btn btn-large btn-outline-secondary" data-dismiss="modal">취소</button>
+                <!-- 클릭 시 수정에서만 노출 및 alert -->
+                <button type="button" class="btn btn-large btn-outline-secondary" data-toggle="modal" data-target="#alert4">삭제</button>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- //popup -->
+
+        <!-- alert1 -->
+        <div class="modal fade" id="alert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                <div class="modal-body">
+                    <p class="text-center mt-4">선택된 내용을 메인에서 제외 하시겠습니까?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-lg btn-dark">확인</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert1 -->
+
+      <!-- alert2 -->
+      <div class="modal fade" id="alert2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center mt-4">영역을 삭제하시겠습니까?<br/><span class="text-primary">등록된 콘텐츠는 게시 안함으로 변경됩니다.</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-lg btn-dark">확인</button>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- //alert2 -->
+
+      <!-- alert3 -->
+      <div class="modal fade" id="alert3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center mt-4">제목을 입력하세요.</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-lg btn-dark">확인</button>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- //alert3 -->
+
+      <!-- alert4 -->
+      <div class="modal fade" id="alert3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center mt-4">삭제하시겠습니까?</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-lg btn-dark">확인</button>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- //alert4 -->
+    </div>
+    <script>
+      $('.btn-toggle').on('click', function () {
+            $(this).parent().toggleClass('active')
+        })
+    </script>
+</body>
+</html>

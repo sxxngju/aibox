@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>관리자</title>
+    <meta name="title" content="관리자">
+    <meta name="keywords" content="관리자">
+    <meta name="description" content="관리자">
+    <link rel="stylesheet" href="../../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/lib/style.css">
+    <link rel="stylesheet" href="../../css/lib/style/index.css">
+
+    <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/lib/ui.js"></script>
+</head>
+<body class="modal-open">
+    <div class="wrap">
+        <!-- popup2 : 메인 콘텐츠 등록 창 -->
+        <div class="modal fade" id="popup2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+              <div class="modal-header modal-default">
+                <h5 class="modal-title pl-0" id="exampleModalLabel">메인 콘텐츠 등록</h5>
+              </div>
+              <div class="modal-body">
+                <ul class="main-contents-list">
+                  <li>
+                    <p>게시여부</p>
+                    <div class="d-flex">
+                      <label class="form-raido"><input type="radio" name="radio1" id=""> <span>게시 안함</span></label>
+                      <label class="form-raido"><input type="radio" name="radio1" id=""> <span>게시</span></label>
+                    </div>
+                  </li>
+                  <li>
+                    <p>위치</p>
+                    <div class="d-flex flex-wrap">
+                      <label class="form-raido"><input type="radio" name="radio2" id=""> <span>인기 콘텐츠</span></label>
+                      <label class="form-raido"><input type="radio" name="radio2" id=""> <span>추천 AI서비스</span></label>
+                      <label class="form-raido"><input type="radio" name="radio2" id=""> <span>AI 콘텐츠</span></label>
+                      <label class="form-raido"><input type="radio" name="radio2" id=""> <span>인기 서비스</span></label>
+                      <label class="form-raido"><input type="radio" name="radio2" id=""> <span>AI 서비스</span></label>
+                      <label class="form-raido"><input type="radio" name="radio2" id=""> <span>콘텐츠</span></label>
+                    </div>
+                  </li>
+                  <!-- <li>
+                    <p>라벨</p>
+                    <div class="btn-group auto">
+                      <button type="button" class="btn btn-outline-dark">없음</button>
+                      <button type="button" class="btn btn-primary">인기</button>
+                      <button type="button" class="btn btn-success">신규</button>
+                      <button type="button" class="btn btn-danger">스페셜</button>
+                    </div>
+                    <div class="d-flex">
+                      <label class="form-raido"><input type="radio" name="radio3" id="" checked="checked"> <span>없음</span></label>
+                      <label class="form-raido"><input type="radio" name="radio3" id=""> <span>인기</span></label>
+                      <label class="form-raido"><input type="radio" name="radio3" id=""> <span>신규</span></label>
+                      <label class="form-raido"><input type="radio" name="radio3" id=""> <span>스페셜</span></label>
+                    </div>
+                  </li> -->
+                  <li>
+                    <p>제목*</p>
+                    <input type="text" class="form-control" name="" id="" placeholder="제목을 입력하세요. 최대 20자까지">
+                  </li>
+                  <li>
+                    <p>소개</p>
+                    <textarea class="form-control mr-0" name="" id="" rows="5" placeholder="소개를 입력하세요. 최대 100자까지"></textarea>
+                  </li>
+                  <li>
+                    <p>이미지 추가</p>
+                    <div class="input-group align-items-center">
+                      <div class="custom-file upload-custom-file">
+                          <input type="file" class="custom-file-input" id="">
+                          <label class="custom-file-label" for="">이미지파일명.확장자(파일크기)</label>
+                      </div>
+                      <button type="button" class="btn"><img src="../../img/icon-plus.svg" alt="delete"></button>
+                    </div>
+                  </li>
+                  <li>
+                    <p>링크</p>
+                    <!-- 입력한 주소로 링크 확인 되도록 해주세요. -->
+                    <form onsubmit="window.open(document.querySelector('.link').value, 'resizable scrollbars menubar=yes'); return false;">
+                      <input type="text" class="form-control link" name="" id="" placeholder="http를 포함 전체 url을 입력해주세요.">
+                      <button type="button" value="새 창 열림" onclick="window.open(document.querySelector('.link').value, 'resizable scrollbars menubar=yes'); return false;" class="btn btn-outline-secondary">링크확인</button>
+                    </form>
+                  </li>
+                  <li>
+                    <p>사이트/출처</p>
+                    <input type="text" class="form-control" name="" id="" placeholder="최대 20자까지">
+                  </li>
+                  <!-- 수정에서만 노출 -->
+                  <li>
+                    <p>등록/수정자</p>
+                    <p>김철수</p>
+                  </li>
+                  <li>
+                    <p>등록/수정일</p>
+                    <p>2000-00-00 00:00:00</p>
+                  </li>
+                  <!-- // 수정에서만 노출 -->
+                </ul>
+              </div>
+              <div class="modal-footer">
+                  <!-- 클릭 시 필수 입력 정보 체크, 입력값 없을 시 alert -->
+                  <button type="button" class="btn btn-large btn-dark" data-toggle="modal" data-target="#alert3">확인</button>
+                  <button type="button" class="btn btn-large btn-outline-secondary" data-dismiss="modal">취소</button>
+                  <!-- 클릭 시 수정에서만 노출 및 alert -->
+                  <button type="button" class="btn btn-large btn-outline-secondary" data-toggle="modal" data-target="#alert4">삭제</button>
+              </div>
+              </div>
+          </div>
+        </div>
+      <!-- //popup -->
+      
+      <!-- alert3 -->
+      <div class="modal fade" id="alert3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center mt-4">제목을 입력하세요.</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-lg btn-dark">확인</button>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- //alert3 -->
+
+      <!-- alert4 -->
+      <div class="modal fade" id="alert3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center mt-4">삭제하시겠습니까?</span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-lg btn-dark">확인</button>
+            </div>
+            </div>
+        </div>
+      </div>
+      <!-- //alert4 -->
+    </div>
+
+</body>
+</html>

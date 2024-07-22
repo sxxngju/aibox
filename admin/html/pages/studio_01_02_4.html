@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>관리자</title>
+    <meta name="title" content="관리자">
+    <meta name="keywords" content="관리자">
+    <meta name="description" content="관리자">
+    <link rel="stylesheet" href="../../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/lib/style.css">
+    <link rel="stylesheet" href="../../css/lib/style/index.css">
+
+    <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/lib/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+    <header class="header">
+        <div class="header-inner">
+
+            <!-- header-top -->
+            <div class="header-top">
+                <div class="btn-ht sideMenu">
+                    <button type="button" class="btn"><i class="bi bi-list"><span class="skip">메뉴 열고 닫기</span></i></button>
+                </div>
+                <div class="logo">
+                    <a href="#"> <h1 class="logo"><img src="../../img/logo-vertical.svg" alt="logo" /></h1></a>
+                </div>
+                <!-- <div class="btn-group util">
+                    <div class="btn-ht logout">
+                        <button type="button" class="btn"><i class="bi bi-box-arrow-right"><span class="skip">로그아웃</span></i></button>
+                    </div>
+                    <div class="btn-ht sideQuick">
+                        <button type="button" class="btn"><i class="bi bi-three-dots-vertical"><span class="skip">퀵메뉴 열고 닫기</span></i></button>
+                    </div>
+                </div> -->
+            </div>
+            <!-- //header-top -->
+
+            <!-- nav-->
+            <nav class="nav align-items-center">
+                <ul class="nav-inner">
+                    <li class="nav-item"><a href="./index.html">HOME</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="./member_01.html" role="button" data-toggle="dropdown" aria-expanded="false">회원관리</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./member_01.html">회원관리</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">사이트관리</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./site_01.html">메인</a>
+                                <a class="dropdown-item" href="./site_02.html">이용약관</a>
+                                <a class="dropdown-item" href="./site_03.html">개인정보처리방침</a>
+                                <a class="dropdown-item" href="./site_04.html">개인정보수집동의</a>
+                                <a class="dropdown-item" href="./site_05.html">자주하는 질문</a>
+                                <a class="dropdown-item" href="./site_06.html">제휴/문의</a>
+                                <a class="dropdown-item" href="./site_07.html">팝업</a>
+                                <a class="dropdown-item" href="./site_08.html">공지</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="./data_01.html" role="button" data-toggle="dropdown" aria-expanded="false">데이터관리</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./data_01.html">받아쓰기</a>
+                                <a class="dropdown-item" href="./data_03.html">금지어 관리</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="./studio_01.html" role="button" data-toggle="dropdown" aria-expanded="false">스튜디오</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./studio_01.html">스튜디오</a>
+                                <a class="dropdown-item" href="./studio_01_01.html">만들기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="./authority_01.html">권한관리</a></li>
+                </ul>
+                <div class="nav-user ml-auto">
+                    <a href="./studio_01_01.html" class="btn btn-primary btn-large">스튜디오 만들기</a>
+                    <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn dropdown-toggle">
+                        <img src="../../img/icon-user.svg" alt="user" />
+                        <div class="dropdown-menu logout">
+                            <a class="dropdown-item" href="#">내 정보</a>
+                            <a class="dropdown-item" href="./login.html" target="_self">로그아웃</a>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+            <!-- //nav-->
+
+        </div>
+    </header>
+    <!-- //header -->
+
+        <!-- container -->
+        <div class="container">
+            <div class="container-inner">
+
+                <!-- content -->
+                <!-- Note. aside 없는 case: no_aside 추가  -->
+                <div class="content no_aside">
+                    <div class="content-inner">
+                        <div class="studio-wrap">
+                            <div class="studio-top">
+                                <div class="studio-date">
+                                    <span>2024-03-34 12:34:45</span>
+                                    <span>마지막 수정</span>
+                                    <span>등록/수정자(아이디)</span>
+                                </div>
+                                <!-- Note. 아이콘 없을 경우엔 제거 가능 -->
+                                <div class="studio-title">
+                                    <!-- <img src="../../img/icon-question.svg" alt="icon"> -->
+                                    <h2>타이틀입니다 제목 내용이 들어갑니다.</h2>
+                                </div>
+                                <div class="btn-group btn-group-lg auto">
+                                    <button type="button" class="d-flex btn btn btn-dark" data-toggle="modal" data-target="#toastSave"><i class="icon icon-floppy filter_white mr-3"></i> 저장하기</button>
+                                    <button type="button" class="d-flex btn btn-outline-dark hover"><i class="icon icon-box-arrow-right mr-3"></i> 나가기</button>
+                                </div>
+                            </div>
+
+                            <div class="studio-box studio-left">
+                                <!-- step -->
+                                <div class="step-wrap">
+                                    <ul>
+                                        <li>
+                                            <a href="./studio_01_01.html">1단계<br/>기본정보</a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="./studio_01_02.html">2단계<br/>내용 구성</a>
+                                        </li>
+                                        <li>
+                                            <a href="./studio_01_03.html">3단계<br/>프롬프트 작성</a>
+                                        </li>
+                                        <li>
+                                            <a href="./studio_01_04.html">4단계<br/>테스트</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //step -->
+
+                                <div class="studio-inner">
+                                    <div class="page-title d-flex">
+                                        <h2 class="title flex-grow-1">내용 구성</h2>
+                                    </div>
+
+                                    <div class="d-flex">
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-large btn-outline-dark ">
+                                                <input type="radio" name="line_options" id="line_option1" autocomplete="off" 
+                                                    onclick="window.location.href=this.value"
+                                                    value="/admin/html/pages/studio_01_02.html"                                                >한 줄 입력
+                                            </label>
+                                            <label class="btn btn-large btn-outline-dark">
+                                                <input type="radio" name="line_options" id="line_option2" autocomplete="off"
+                                                    onclick="window.location.href=this.value"
+                                                    value="/admin/html/pages/studio_01_02_2.html"
+                                                >여러 줄 입력
+                                            </label>
+                                            <label class="btn btn-large btn-outline-dark">
+                                                <input type="radio" name="line_options" id="line_option3" autocomplete="off"
+                                                    onclick="window.location.href=this.value"
+                                                    value="/admin/html/pages/studio_01_02_3.html"
+                                                >드롭다운(단일)
+                                            </label>
+                                            <label class="btn btn-large btn-outline-dark active">
+                                                <input type="radio" name="line_options" id="line_option3" autocomplete="off" checked
+                                                    onclick="window.location.href=this.value"
+                                                    value="/admin/html/pages/studio_01_02_4.html"
+                                                >옵션 버튼(복수)
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="line-box mt-5 p-3">
+                                        <strong class="option d-block mb-3">1. 입력창 제목</strong>
+                                        <div class="main-contents-list">
+                                            <span class="blind-none">제목을 입력해주세요. 최대 100자까지</span>
+                                            <input type="text" class="form-control" name="" id="" placeholder="제목을 입력해주세요. 최대 100자까지">
+                                        </div>
+                                        
+                                        <strong class="option d-block mt-5">2. 입력창 설명</strong>
+                                        <p class="text-secondary ml-4">입력창에 대한 부연 설명을 적어주세요.</p>
+                                        <div class="main-contents-list">
+                                            <span class="blind-none">입력창에 대한 부연 설명을 적어주세요.</span>
+                                            <textarea class="form-control" name="" id="" rows="5" placeholder="설명을 입력해주세요. 최대 500자까지"></textarea>
+                                        </div>
+
+                                        <strong class="option d-block mt-5">3. 옵션구성</strong>
+                                        <p class="text-secondary ml-4">사용자가 고를 수 있는 옵션의 내용을 구성해주세요. 옵션명과 설명을 적어주세요.</p>
+
+                                        <!-- Note. +버튼, -버튼으로 옵션박스 추가생성, 제거 -->
+                                        <div class="d-flex align-items-center justify-content-between mt-3">
+                                            <p class="s-title1">옵션1</p>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn">
+                                                    <i class="icon icon-plus"></i>
+                                                </button>
+                                                <button type="button" class="btn">
+                                                    <i class="icon icon-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="main-contents-list">
+                                            <span class="blind-none">옵션명을 적어주세요.</span>
+                                            <input type="text" class="form-control" name="" id="" placeholder="옵션명을 적어주세요.">
+                                        </div>
+                                        <div class="main-contents-list mt-2">
+                                            <span class="blind-none">이 옵션을 선택했을 때 AI에게 전달될 내용을 적어주세요.</span>
+                                            <input type="text" class="form-control" name="" id="" placeholder="이 옵션을 선택했을 때 AI에게 전달될 내용을 적어주세요.">
+                                        </div>
+
+                                        <div class="d-flex align-items-center justify-content-between mt-3">
+                                            <p class="s-title1">옵션2</p>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn">
+                                                    <i class="icon icon-plus"></i>
+                                                </button>
+                                                <button type="button" class="btn">
+                                                    <i class="icon icon-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="main-contents-list">
+                                            <span class="blind-none">옵션명을 적어주세요.</span>
+                                            <input type="text" class="form-control" name="" id="" placeholder="옵션명을 적어주세요.">
+                                        </div>
+                                        <div class="main-contents-list mt-2">
+                                            <span class="blind-none">이 옵션을 선택했을 때 AI에게 전달될 내용을 적어주세요.</span>
+                                            <input type="text" class="form-control" name="" id="" placeholder="이 옵션을 선택했을 때 AI에게 전달될 내용을 적어주세요.">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="btn-group center mt-3">
+                                        <button type="button" class="btn btn-large btn-primary">추가</button>
+                                        <button type="button" class="btn btn-large btn-secondary">삭제</button>
+                                        <!-- Note. 삭제버튼 비활성화시 disabled 추가(아래 버튼으로 적용) -->
+                                        <!-- <button type="button" disabled class="btn btn-large btn-danger">삭제</button> -->
+                                    </div>
+
+                                    <a href="./studio_01_03.html" class="mt-5 w-100 btn btn-large btn-dark">다음</a>
+
+                                </div>
+                            </div>
+                            <div class="studio-box studio-right">
+                                <div class="studio-inner">
+                                    <!-- 기본정보 -->
+                                    <!-- Note. 아이콘 없을 경우엔 제거 가능 -->
+                                    <h3 class="title">
+                                        <!-- <img src="../../img/icon-question.svg" alt="icon"> -->
+                                        타이틀입니다 제목 내용이 들어갑니다.
+                                    </h3>
+                                    <p class="text-secondary">설명글 내용이 들어갑니다.</p>
+                                    <div class="">
+                                        <span class="badge fill-primary">업무</span>
+                                        <span class="badge">회의록</span>
+                                    </div>
+                                    <!-- //기본정보 -->
+                                    
+                                    <!-- 내용 구성 입력시 추가 -->
+                                    <div class="studio_addbox">
+                                        <strong class="option d-block mb-3">1. 입력창 제목 내용이 들어갑니다.</strong>
+                                        <strong class="option d-block mb-3 mt-5">2. 입력창 설명 내용이 들어갑니다.</strong>
+
+                                        <!-- Note.case4. 드롭다운(복수) 선택시 2. 입력창 설명 아래 생성됨 -->
+                                        <div class="">
+                                            <span class="badge">옵션 1</span>
+                                            <span class="badge">유머러스</span>
+                                            <span class="badge">역사</span>
+                                            <span class="badge">힐링</span>
+                                        </div>
+                                    </div>
+                                    <!-- //내용 구성 입력시 추가 -->
+
+                                    <div class="d-flex justify-content-center mt-5">
+                                        <button type="button" class="mt-auto btn btn-large btn-outline-dark">사용자 서비스 화면 미리보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //content -->
+
+                <!-- side-quick -->
+                <!-- <div class="side-quick">
+                    <div class="side-quick-inner">
+                        <div class="login-info">
+                            <div class="sq-item login-name">홍길동<span>님</span></div>
+                            <div class="btn-sq"><button type="button" class="btn">로그아웃</button></div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- //side-quick -->
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+            <div class="copyright"> Copyrights © 2023 eutopos, co.ltd. All rights Reserved.</div>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- toastSave -->
+        <div class="modal fade" id="toastSave" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="text-center mt-4">저장되었습니다.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //toastSave -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+// root setting ///////////////////////////////////////////////////////////
+/* 
+  이미 vuetify에서 선언해 놓은 변수를 고칠 수 있음
+  ex) v-text-field의 --v-input-control-height: var(--root-input-height-medium);
+*/
+:root {
+  --font-family: 'SpoqaHanSans', 'malgun gothic', '맑은 고딕', 'open sans', sans-serif;
+
+  //input values
+  --root-input-height-small: 32px;
+  --root-input-height-default: 54px;
+  --root-input-height-large: 72px;
+  --root-input-padding-start: 30px;
+  --root-input-padding-end: 30px;
+  --root-input-padding-top-small: 5px;
+  --root-input-padding-bottom-small: 5px;
+  --root-input-active-border-width: 2px;
+  --root-input-error-border-width: 2px;
+  --root-input-padding-bottom: 16px;
+
+  //select values
+  --root-select-padding-start: 20px;
+  --root-select-padding-end: 20px;
+
+  //checkbox values
+  --root-checkbox-size: 24px;
+
+  //btn values
+  --root-btn-height-default: 40px;
+  --root-btn-height-small: 34px;
+  --root-btn-height-large: 54px;
+
+  // TAB
+  --v-tabs-height: 80px;
+}

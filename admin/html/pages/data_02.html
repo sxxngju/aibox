@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>관리자</title>
+        <meta name="title" content="관리자" />
+        <meta name="keywords" content="관리자" />
+        <meta name="description" content="관리자" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../../css/lib/style.css" />
+        <link rel="stylesheet" href="../../css/lib/style/index.css" />
+
+        <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+        <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+        <script src="../../js/lib/ui.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- header -->
+            <header class="header">
+                <div class="header-inner">
+                    <!-- header-top -->
+                    <div class="header-top">
+                        <div class="btn-ht sideMenu">
+                            <button type="button" class="btn">
+                                <i class="bi bi-list"><span class="skip">메뉴 열고 닫기</span></i>
+                            </button>
+                        </div>
+                        <div class="logo">
+                            <a href="#">
+                                <h1 class="logo"><img src="../../img/logo-vertical.svg" alt="logo" /></h1
+                            ></a>
+                        </div>
+                        <!-- <div class="btn-group util">
+                            <div class="btn-ht logout">
+                        <button type="button" class="btn"><i class="bi bi-box-arrow-right"><span class="skip">로그아웃</span></i></button>
+                    </div>
+                            <div class="btn-ht sideQuick">
+                                <button type="button" class="btn">
+                                    <i class="bi bi-three-dots-vertical"><span class="skip">퀵메뉴 열고 닫기</span></i>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- //header-top -->
+
+                    <!-- nav-->
+                    <nav class="nav align-items-center">
+                        <ul class="nav-inner">
+                            <li class="nav-item"><a href="./index.html">HOME</a></li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./member_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >회원관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./member_01.html">회원관리</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a class="btn dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"
+                                        >사이트관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./site_01.html">메인</a>
+                                        <a class="dropdown-item" href="./site_02.html">이용약관</a>
+                                        <a class="dropdown-item" href="./site_03.html">개인정보처리방침</a>
+                                        <a class="dropdown-item" href="./site_04.html">개인정보수집동의</a>
+                                        <a class="dropdown-item" href="./site_05.html">자주하는 질문</a>
+                                        <a class="dropdown-item" href="./site_06.html">제휴/문의</a>
+                                        <a class="dropdown-item" href="./site_07.html">팝업</a>
+                                        <a class="dropdown-item" href="./site_08.html">공지</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./data_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >데이터관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./data_01.html">받아쓰기</a>
+                                        <a class="dropdown-item" href="./data_03.html">금지어 관리</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./studio_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >스튜디오</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./studio_01.html">스튜디오</a>
+                                        <a class="dropdown-item" href="./studio_01_01.html">만들기</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="./authority_01.html">권한관리</a></li>
+                        </ul>
+                        <div class="nav-user ml-auto">
+                            <a href="./studio_01.html" class="btn btn-primary btn-large">스튜디오 만들기</a>
+                            <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn dropdown-toggle">
+                                <img src="../../img/icon-user.svg" alt="user" />
+                                <div class="dropdown-menu logout">
+                                    <a class="dropdown-item" href="#">내 정보</a>
+                                    <a class="dropdown-item" href="./login.html" target="_self">로그아웃</a>
+                                </div>
+                            </button>
+                        </div>
+                    </nav>
+                    <!-- //nav-->
+                </div>
+            </header>
+            <!-- //header -->
+
+            <!-- container -->
+            <div class="container">
+                <div class="container-inner">
+                    <!-- sidemenu -->
+                    <aside class="side">
+                        <div class="side-inner">
+                            <h2 class="title">데이터관리</h2>
+                            <ul>
+                                <li class="side-item"><a href="./data_01.html">받아쓰기</a></li>
+                                <li class="side-item"><a href="./data_03.html">금지어 관리</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- //sidemenu -->
+
+                    <!-- content -->
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="page-title d-flex">
+                                <h2 class="title flex-grow-1">컬러링</h2>
+                                <p class="breadcrumbs">데이터관리&gt;컬러링</p>
+                            </div>
+
+                            <!-- table -->
+                            <table class="table table-type2">
+                                <colgroup>
+                                    <col style="width: 10%" />
+                                    <col style="width: auto" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">검색</th>
+                                        <td class="d-flex">
+                                            <div class="d-flex col-1">
+                                                <select class="form-select" name="" id="">
+                                                    <option>제목</option>
+                                                    <option>내용</option>
+                                                </select>
+                                            </div>
+                                            <div class="d-flex col-11">
+                                                <input type="text" class="form-control" name="" id="" placeholder="검색어를 입력하세요." />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">게시여부</th>
+                                        <td colspan="3">
+                                            <div class="d-flex">
+                                                <label class="form-raido"
+                                                    ><input type="radio" name="radio1" id="" checked="checked" /> <span>전체</span></label
+                                                >
+                                                <label class="form-raido"
+                                                    ><input type="radio" name="radio1" id="" /> <span>게시</span></label
+                                                >
+                                                <label class="form-raido"
+                                                    ><input type="radio" name="radio1" id="" /> <span>게시 안함</span></label
+                                                >
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- //table -->
+
+                            <!-- btn-group -->
+                            <div class="btn-group btn-group-lg type1 auto center">
+                                <button type="button" class="btn btn-primary">검색</button>
+                                <button type="button" class="btn btn-secondary">전체목록</button>
+                            </div>
+                            <!-- //btn-group -->
+
+                            <div class="table-top d-flex">
+                                <div class="btn-group auto">
+                                    <button type="button" class="btn btn-large btn-outline-dark">선택삭제</button>
+                                </div>
+                                <div class="result-total flex-grow-1 ml-4">Total<span class="text-danger px-2"> 3 </span></div>
+                                <div class="col-1 mr-2">
+                                    <select name="" id="" class="form-select h-100">
+                                        <option value="최신순">최신순</option>
+                                        <option value="최신순">등록순</option>
+                                        <option value="최신순">좋아요순</option>
+                                    </select>
+                                </div>
+                                <div class="btn-group btn-group-lg type3">
+                                    <button type="button" class="btn btn-primary px-3 mr-0">20</button>
+                                    <button type="button" class="btn btn-outline-secondary px-3 mr-0">50</button>
+                                    <button type="button" class="btn btn-outline-secondary px-3 mr-0">100</button>
+                                </div>
+                            </div>
+
+                            <!-- table -->
+                            <table class="table table-type2 text-center line">
+                                <colgroup>
+                                    <col style="width: 5%" />
+                                    <col />
+                                    <col />
+                                    <col style="width: 25%" />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <label class="form-check center"><input type="checkbox" name="" id="" /></label>
+                                        </th>
+                                        <th>고유번호</th>
+                                        <th>이미지</th>
+                                        <th>제목</th>
+                                        <th>게시여부</th>
+                                        <th>게시관리</th>
+                                        <th>조회수</th>
+                                        <th>좋아요</th>
+                                        <th>등록자</th>
+                                        <th>등록일</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label class="form-check center"><input type="checkbox" name="" id="" /></label>
+                                        </td>
+                                        <td>00005</td>
+                                        <td>img</td>
+                                        <td class="text-left">
+                                            <a href="#" class="text-ellip line1"
+                                                >컬러링 제목 한 줄 말줄임 컬러링 제목 한 줄 말줄임 컬러링 제목 한 줄 말줄임 컬러링 제목 한
+                                                줄 말줄임 컬러링 제목 한 줄 말줄임</a
+                                            >
+                                        </td>
+                                        <td>게시</td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#popup">
+                                                변경
+                                            </button>
+                                        </td>
+                                        <td>301</td>
+                                        <td>12</td>
+                                        <td>김아이(pinkman)</td>
+                                        <td>2024-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="form-check center"><input type="checkbox" name="" id="" /></label>
+                                        </td>
+                                        <td>00004</td>
+                                        <td>img</td>
+                                        <td class="text-left">
+                                            <a href="#" class="text-ellip line1">컬러링 제목</a>
+                                        </td>
+                                        <td>게시안함</td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#popup">
+                                                변경
+                                            </button>
+                                        </td>
+                                        <td>1,254</td>
+                                        <td>12</td>
+                                        <td>김아이(pinkman)</td>
+                                        <td>2024-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="form-check center"><input type="checkbox" name="" id="" /></label>
+                                        </td>
+                                        <td>00003</td>
+                                        <td>img</td>
+                                        <td class="text-left">
+                                            <a href="#" class="text-ellip line1">컬러링 제목</a>
+                                        </td>
+                                        <td>게시안함</td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#popup">
+                                                변경
+                                            </button>
+                                        </td>
+                                        <td>1,254</td>
+                                        <td>12</td>
+                                        <td>김아이(pinkman)</td>
+                                        <td>2024-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="form-check center"><input type="checkbox" name="" id="" /></label>
+                                        </td>
+                                        <td>00002</td>
+                                        <td>img</td>
+                                        <td class="text-left">
+                                            <a href="#" class="text-ellip line1">컬러링 제목</a>
+                                        </td>
+                                        <td>게시안함</td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#popup">
+                                                변경
+                                            </button>
+                                        </td>
+                                        <td>1,254</td>
+                                        <td>12</td>
+                                        <td>김아이(pinkman)</td>
+                                        <td>2024-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label class="form-check center"><input type="checkbox" name="" id="" /></label>
+                                        </td>
+                                        <td>00001</td>
+                                        <td>img</td>
+                                        <td class="text-left">
+                                            <a href="#" class="text-ellip line1">컬러링 제목</a>
+                                        </td>
+                                        <td>게시안함</td>
+                                        <td>
+                                            <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#popup">
+                                                변경
+                                            </button>
+                                        </td>
+                                        <td>1,254</td>
+                                        <td>12</td>
+                                        <td>김아이(pinkman)</td>
+                                        <td>2024-00-00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- //table -->
+
+                            <!-- paging -->
+                            <div class="paging">
+                                <ul class="pagination pagination-lg">
+                                    <li class="page-item disabled">
+                                        <a class="page-link arrow no-border" href="#"
+                                            ><i class="bi bi-chevron-double-left"><span class="skip">첫 페이지</span></i></a
+                                        >
+                                    </li>
+                                    <li class="page-item disabled">
+                                        <a class="page-link arrow no-border" href="#"
+                                            ><i class="bi bi-chevron-left"><span class="skip">이전페이지</span></i></a
+                                        >
+                                    </li>
+                                    <li class="page-item active"><a class="page-link no-border" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">6</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">7</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">8</a></li>
+                                    <li class="page-item"><a class="page-link no-border" href="#">9</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link arrow no-border" href="#"
+                                            ><i class="bi bi-chevron-right"><span class="skip">다음페이지</span></i></a
+                                        >
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link arrow no-border" href="#"
+                                            ><i class="bi bi-chevron-double-right"><span class="skip">마지막 페이지</span></i></a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- //paging -->
+                        </div>
+                    </div>
+                    <!-- //content -->
+
+                    <!-- side-quick -->
+                    <!-- <div class="side-quick">
+                    <div class="side-quick-inner">
+                        <div class="login-info">
+                            <div class="sq-item login-name">홍길동<span>님</span></div>
+                            <div class="btn-sq"><button type="button" class="btn">로그아웃</button></div>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- //side-quick -->
+                </div>
+            </div>
+            <!-- //container -->
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-inner">
+                    <div class="copyright">Copyrights © 2023 eutopos, co.ltd. All rights Reserved.</div>
+                </div>
+            </footer>
+            <!-- //footer -->
+
+            <!-- popup : form -->
+            <div class="modal fade" id="popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header modal-default">
+                            <h5 class="modal-title" id="exampleModalLabel">컬러링 게시 관리</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"
+                                    ><i class="bi bi-x-lg"><span class="skip">닫기</span></i></span
+                                >
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- start -->
+                            <div class="line-box">
+                                <div class="d-flex justify-content-center">
+                                    <label class="form-raido"
+                                        ><input type="radio" name="radio" id="" checked="checked" /> <span>게시</span></label
+                                    >
+                                    <label class="form-raido"><input type="radio" name="radio" id="" /> <span>게시 안함</span></label>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-large btn-outline-dark" data-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-large btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //popup -->
+        </div>
+    </body>
+</html>

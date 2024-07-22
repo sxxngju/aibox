@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>관리자</title>
+        <meta name="title" content="관리자" />
+        <meta name="keywords" content="관리자" />
+        <meta name="description" content="관리자" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../../css/lib/style.css" />
+        <link rel="stylesheet" href="../../css/lib/style/index.css" />
+
+        <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+        <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+        <script src="../../js/lib/ui.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <!-- header -->
+            <header class="header">
+                <div class="header-inner">
+                    <!-- header-top -->
+                    <div class="header-top">
+                        <div class="btn-ht sideMenu">
+                            <button type="button" class="btn">
+                                <i class="bi bi-list"><span class="skip">메뉴 열고 닫기</span></i>
+                            </button>
+                        </div>
+                        <div class="logo">
+                            <a href="#">
+                                <h1 class="logo"><img src="../../img/logo-vertical.svg" alt="logo" /></h1
+                            ></a>
+                        </div>
+                        <!-- <div class="btn-group util">
+                            <div class="btn-ht logout">
+                        <button type="button" class="btn"><i class="bi bi-box-arrow-right"><span class="skip">로그아웃</span></i></button>
+                    </div>
+                            <div class="btn-ht sideQuick">
+                                <button type="button" class="btn">
+                                    <i class="bi bi-three-dots-vertical"><span class="skip">퀵메뉴 열고 닫기</span></i>
+                                </button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- //header-top -->
+
+                    <!-- nav-->
+                    <nav class="nav align-items-center">
+                        <ul class="nav-inner">
+                            <li class="nav-item"><a href="./index.html">HOME</a></li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./member_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >회원관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./member_01.html">회원관리</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a class="btn dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"
+                                        >사이트관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./site_01.html">메인</a>
+                                        <a class="dropdown-item" href="./site_02.html">이용약관</a>
+                                        <a class="dropdown-item" href="./site_03.html">개인정보처리방침</a>
+                                        <a class="dropdown-item" href="./site_04.html">개인정보수집동의</a>
+                                        <a class="dropdown-item" href="./site_05.html">자주하는 질문</a>
+                                        <a class="dropdown-item" href="./site_06.html">제휴/문의</a>
+                                        <a class="dropdown-item" href="./site_07.html">팝업</a>
+                                        <a class="dropdown-item" href="./site_08.html">공지</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./data_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >데이터관리</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./data_01.html">받아쓰기</a>
+                                        <a class="dropdown-item" href="./data_03.html">금지어 관리</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown dropdownH">
+                                    <a
+                                        class="btn dropdown-toggle"
+                                        href="./studio_01.html"
+                                        role="button"
+                                        data-toggle="dropdown"
+                                        aria-expanded="false"
+                                        >스튜디오</a
+                                    >
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./studio_01.html">스튜디오</a>
+                                        <a class="dropdown-item" href="./studio_01_01.html">만들기</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item"><a href="./authority_01.html">권한관리</a></li>
+                        </ul>
+                        <div class="nav-user ml-auto">
+                            <a href="./studio_01.html" class="btn btn-primary btn-large">스튜디오 만들기</a>
+                            <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn dropdown-toggle">
+                                <img src="../../img/icon-user.svg" alt="user" />
+                                <div class="dropdown-menu logout">
+                                    <a class="dropdown-item" href="#">내 정보</a>
+                                    <a class="dropdown-item" href="./login.html" target="_self">로그아웃</a>
+                                </div>
+                            </button>
+                        </div>
+                    </nav>
+                    <!-- //nav-->
+                </div>
+            </header>
+            <!-- //header -->
+
+            <!-- container -->
+            <div class="container">
+                <div class="container-inner">
+                    <!-- sidemenu -->
+                    <aside class="side">
+                        <div class="side-inner">
+                            <h2 class="title">데이터관리</h2>
+                            <ul>
+                                <li class="side-item"><a href="./data_01.html">받아쓰기</a></li>
+                                <li class="side-item active"><a href="./data_03.html">금지어 관리</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- //sidemenu -->
+
+                    <!-- content -->
+                    <div class="content">
+                        <div class="content-inner">
+                            <div class="page-title d-flex">
+                                <h2 class="title flex-grow-1">금지어 관리</h2>
+                                <p class="breadcrumbs">데이터관리&gt;금지어 관리</p>
+                            </div>
+
+                            <h3 class="title type1 mb-2">금지어 등록</h3>
+                            <div class="d-flex">
+                                <div class="d-flex col-6 p-0">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        name=""
+                                        id=""
+                                        placeholder="한 번에 여러 단어 등록 시 쉼표(,)로 구분해주세요."
+                                    />
+                                </div>
+                                <div class="btn-group type2 mb-0">
+                                    <button type="button" class="btn btn-primary">등록</button>
+                                </div>
+                            </div>
+
+                            <div class="list-text bar">
+                                <ul class="list-text-inner">
+                                    <li>금지어는 받아쓰기, 컬러링에 모두 적용됩니다.</li>
+                                </ul>
+                            </div>
+
+                            <h3 class="title type1 mb-2 mt-5">등록된 금지어 <span class="text-primary">(총 120개)</span></h3>
+                            <div class="ban-box">
+                                <div class="ban-box-inner">
+                                    <button type="button" class="btn hover btn-outline-dark">바보<i class="icon icon-x"></i></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">바보<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">멍청이<em class="icon icon-x"></em></button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        바보멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                    <button type="button" class="btn hover btn-outline-dark">
+                                        멍청이멍청이<em class="icon icon-x"></em>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //content -->
+
+                    <!-- side-quick -->
+                    <!-- <div class="side-quick">
+                    <div class="side-quick-inner">
+                        <div class="login-info">
+                            <div class="sq-item login-name">홍길동<span>님</span></div>
+                            <div class="btn-sq"><button type="button" class="btn">로그아웃</button></div>
+                        </div>
+                    </div>
+                </div> -->
+                    <!-- //side-quick -->
+                </div>
+            </div>
+            <!-- //container -->
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="footer-inner">
+                    <div class="copyright">Copyrights © 2023 eutopos, co.ltd. All rights Reserved.</div>
+                </div>
+            </footer>
+            <!-- //footer -->
+        </div>
+    </body>
+</html>

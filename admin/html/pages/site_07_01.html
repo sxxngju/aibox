@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>관리자</title>
+    <meta name="title" content="관리자">
+    <meta name="keywords" content="관리자">
+    <meta name="description" content="관리자">
+    <link rel="stylesheet" href="../../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/lib/style.css">
+    <link rel="stylesheet" href="../../css/lib/style/index.css">
+
+    <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/lib/ui.js"></script>
+</head>
+<body>
+
+    <div class="wrap">
+        <!-- header -->
+        <header class="header">
+            <div class="header-inner">
+    
+                <!-- header-top -->
+                <div class="header-top">
+                    <div class="btn-ht sideMenu">
+                        <button type="button" class="btn"><i class="bi bi-list"><span class="skip">메뉴 열고 닫기</span></i></button>
+                    </div>
+                    <div class="logo">
+                        <a href="#"> <h1 class="logo"><img src="../../img/logo-vertical.svg" alt="logo" /></h1></a>
+                    </div>
+                    <!-- <div class="btn-group util">
+                        <div class="btn-ht logout">
+                            <button type="button" class="btn"><i class="bi bi-box-arrow-right"><span class="skip">로그아웃</span></i></button>
+                        </div>
+                        <div class="btn-ht sideQuick">
+                            <button type="button" class="btn"><i class="bi bi-three-dots-vertical"><span class="skip">퀵메뉴 열고 닫기</span></i></button>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- //header-top -->
+    
+                <!-- nav-->
+                <nav class="nav align-items-center">
+                    <ul class="nav-inner">
+                        <li class="nav-item"><a href="./index.html">HOME</a></li>
+                        <li class="nav-item">
+                            <div class="dropdown dropdownH">
+                                <a class="btn dropdown-toggle" href="./member_01.html" role="button" data-toggle="dropdown" aria-expanded="false">회원관리</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="./member_01.html">회원관리</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active">
+                            <div class="dropdown dropdownH">
+                                <a class="btn dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">사이트관리</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="./site_01.html">메인</a>
+                                    <a class="dropdown-item" href="./site_02.html">이용약관</a>
+                                    <a class="dropdown-item" href="./site_03.html">개인정보처리방침</a>
+                                    <a class="dropdown-item" href="./site_04.html">개인정보수집동의</a>
+                                    <a class="dropdown-item" href="./site_05.html">자주하는 질문</a>
+                                    <a class="dropdown-item" href="./site_06.html">제휴/문의</a>
+                                    <a class="dropdown-item" href="./stte_07.html">팝업</a>
+                                    <a class="dropdown-item" href="./site_08.html">공지</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropdownH">
+                                <a class="btn dropdown-toggle" href="./data_01.html" role="button" data-toggle="dropdown" aria-expanded="false">데이터관리</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="./data_01.html">받아쓰기</a>
+                                    <a class="dropdown-item" href="./data_03.html">금지어 관리</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown dropdownH">
+                                <a class="btn dropdown-toggle" href="./studio_01.html" role="button" data-toggle="dropdown" aria-expanded="false">스튜디오</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="./studio_01.html">스튜디오</a>
+                                    <a class="dropdown-item" href="./studio_01_01.html">만들기</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="./authority_01.html">권한관리</a></li>
+                    </ul>
+                    <div class="nav-user ml-auto">
+                        <a href="./studio_01_01.html" class="btn btn-primary btn-large">스튜디오 만들기</a>
+                        <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn dropdown-toggle">
+                            <img src="../../img/icon-user.svg" alt="user" />
+                            <div class="dropdown-menu logout">
+                                <a class="dropdown-item" href="#">내 정보</a>
+                                <a class="dropdown-item" href="./login.html" target="_self">로그아웃</a>
+                            </div>
+                        </button>
+                    </div>
+                </nav>
+                <!-- //nav-->
+    
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- container -->
+        <div class="container">
+            <div class="container-inner">
+                <!-- sidemenu -->
+                <aside class="side">
+                    <div class="side-inner">
+                        <h2 class="title">사이트관리</h2>
+                        <ul>
+                            <li class="side-item"><a href="./site_01.html">메인</a></li>
+                            <li class="side-item"><a href="./site_02.html">이용약관</a></li>
+                            <li class="side-item"><a href="./site_03.html">개인정보처리방침</a></li>
+                            <li class="side-item"><a href="./site_04.html">개인정보수집동의</a></li>
+                            <li class="side-item"><a href="./site_05.html">자주하는 질문</a></li>
+                            <li class="side-item"><a href="./site_06.html">제휴/문의 <strong class="num text-primary">2</strong></a></li>
+                            <li class="side-item active"><a href="./site_07.html">팝업</a></li>
+                            <li class="side-item"><a href="./site_08.html">공지</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- //sidemenu -->
+
+                <!-- content -->
+                <div class="content">
+                    <div class="content-inner">
+                        <div class="page-title d-flex mb-3">
+                            <h2 class="title flex-grow-1">팝업</h2>
+                            <p class="breadcrumbs">사이트관리>팝업</p>
+                        </div>
+
+                        <!-- table -->
+                        <a href="./site_07.html" class="btn btn-large btn-outline-dark mb-3">목록으로</a>
+                        <p class="pt-3 border-top border-dark"><span class="pl-3">*는 필수 입력정보</span></p>
+
+                        <table class="table table-type2 text-center mb-4">
+                            <colgroup>
+                                <col style="width: 10%;">
+                                <col style="width: 40%;">
+                                <col style="width: 10%;">
+                                <col style="width: 40%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-left">등록자</th>
+                                    <td class="text-left">박아론(parkahlon)</td>
+                                    <th scope="row" class="text-left">등록일</th>
+                                    <td class="text-left">2020-00-00 12:34:56</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-left">게시여부</th>
+                                    <td colspan="6">
+                                        <form class="d-flex col-auto">
+                                            <label class="form-raido"><input type="radio" name="radio" id="" checked="checked"> <span>게시</span></label>
+                                            <label class="form-raido"><input type="radio" name="radio" id=""> <span>미게시</span></label>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-left">창닫기</th>
+                                    <td colspan="6">
+                                        <form class="d-flex col-auto">
+                                            <label class="form-raido"><input type="radio" name="radio" id="" checked="checked"> <span>오늘 하루 열지 않음</span></label>
+                                            <label class="form-raido"><input type="radio" name="radio" id=""> <span>다시 열지 않음</span></label>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-left">이미지*</th>
+                                    <td colspan="6"  class="text-left">
+                                        <div class="input-group col-3 align-items-center">
+                                            <div class="custom-file upload-custom-file">
+                                                <input type="file" class="custom-file-input" id="">
+                                                <label class="custom-file-label" for="">등록시파일명.파일형식(파일크기) 표시</label>
+                                            </div>
+                                            <button type="button" class="btn"><img src="../../img/icon-plus.svg" alt="delete"></button>
+                                        </div>
+                                        <p class="mb-0 mt-1">파일형식(jpg, png 영어만 허용), 최대 2MB까지 (권장 사이즈 : 400x400)</p>
+                                        <div class="img-thumbnail"><img src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202103/25/fbc1d446-2a25-4ea8-b3f4-30b2a795e97c.jpg" alt=""></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-left">제목*</th>
+                                    <td colspan="6"><input type="text" class="form-control" name="" id="" placeholder="팝업의 alt와 속성의 내용을 최대 50자까지 입력해주세요."></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-left">링크*</th>
+                                    <td colspan="6">
+                                        <!-- 입력한 주소로 링크 확인 되도록 해주세요. -->
+                                        <form onsubmit="window.open(document.querySelector('.link').value, 'resizable scrollbars menubar=yes'); return false;" class="d-flex">
+                                            <input type="text" class="form-control link w-95" name="" id="" placeholder="url 전체 경로를 입력하세요.">
+                                            <button type="button" value="새 창 열림" onclick="window.open(document.querySelector('.link').value, 'resizable scrollbars menubar=yes'); return false;" class="btn btn-secondary col-1">링크확인</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-left">게시일*</th>
+                                    <td colspan="6">
+                                        <div class="form-calendar type2">
+                                            <input type="text" class="form-control datepicker flex-1" placeholder="시작일"> 
+                                            <select class="form-select w60p" name="" id="">
+                                                <option value="00">00시</option>
+                                                <option value="01">01시</option>
+                                                <option value="02">02시</option>
+                                                <option value="03">03시</option>
+                                                <option value="04">04시</option>
+                                                <option value="05">05시</option>
+                                                <option value="06">06시</option>
+                                                <option value="07">07시</option>
+                                                <option value="08">08시</option>
+                                                <option value="09">09시</option>
+                                                <option value="10">10시</option>
+                                                <option value="11">11시</option>
+                                                <option value="12">12시</option>
+                                                <option value="13">13시</option>
+                                                <option value="14">14시</option>
+                                                <option value="15">15시</option>
+                                                <option value="16">16시</option>
+                                                <option value="17">17시</option>
+                                                <option value="18">18시</option>
+                                                <option value="19">19시</option>
+                                                <option value="20">20시</option>
+                                                <option value="21">21시</option>
+                                                <option value="22">22시</option>
+                                                <option value="23">23시</option>
+                                            </select>
+                                            <select class="form-select w60p" name="" id="">
+                                                <option value="00">00분</option>
+                                                <option value="05">05분</option>
+                                                <option value="10">10분</option>
+                                                <option value="15">15분</option>
+                                                <option value="20">20분</option>
+                                                <option value="25">25분</option>
+                                                <option value="30">30분</option>
+                                                <option value="35">35분</option>
+                                                <option value="40">40분</option>
+                                                <option value="45">45분</option>
+                                                <option value="50">50분</option>
+                                                <option value="55">55분</option>
+                                            </select>
+                                            <span>~</span>
+                                            <input type="text" class="form-control datepicker flex-1" placeholder="종료일">
+                                            <select class="form-select w60p" name="" id="">
+                                                <option value="00">00시</option>
+                                                <option value="01">01시</option>
+                                                <option value="02">02시</option>
+                                                <option value="03">03시</option>
+                                                <option value="04">04시</option>
+                                                <option value="05">05시</option>
+                                                <option value="06">06시</option>
+                                                <option value="07">07시</option>
+                                                <option value="08">08시</option>
+                                                <option value="09">09시</option>
+                                                <option value="10">10시</option>
+                                                <option value="11">11시</option>
+                                                <option value="12">12시</option>
+                                                <option value="13">13시</option>
+                                                <option value="14">14시</option>
+                                                <option value="15">15시</option>
+                                                <option value="16">16시</option>
+                                                <option value="17">17시</option>
+                                                <option value="18">18시</option>
+                                                <option value="19">19시</option>
+                                                <option value="20">20시</option>
+                                                <option value="21">21시</option>
+                                                <option value="22">22시</option>
+                                                <option value="23">23시</option>
+                                            </select>
+                                            <select class="form-select w60p mr-4" name="" id="">
+                                                <option value="00">00분</option>
+                                                <option value="05">05분</option>
+                                                <option value="10">10분</option>
+                                                <option value="15">15분</option>
+                                                <option value="20">20분</option>
+                                                <option value="25">25분</option>
+                                                <option value="30">30분</option>
+                                                <option value="35">35분</option>
+                                                <option value="40">40분</option>
+                                                <option value="45">45분</option>
+                                                <option value="50">50분</option>
+                                                <option value="55">55분</option>
+                                            </select>
+                                            <label class="form-check"><input type="checkbox" name="" id=""> <span>종료일지정</span></label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- //table -->
+
+                        <div class="btn-group auto">
+                            <!-- 팝업 사이즈 이미지에 맞춰주세요. -->
+                            <button type="button" class="btn btn-large btn-outline-dark" data-toggle="modal" data-target="#popup">미리보기</a>
+                            <button type="button" class="btn btn-large btn-dark" data-toggle="modal" data-target="#alert2">저장</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- //content -->
+                
+                <!-- popup : 미리보기 -->
+                <div class="modal fade preview" id="popup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img src="https://picsum.photos/250" alt="thumbnail">
+                            </div>
+                            <!-- footer -->
+                            <div class="modal-footer justify-content-start">
+                                <button type="button" class="btn text-underline" data-dismiss="modal">
+                                    오늘 하루 열지 않음
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- alert case(1/2) : 저장 성공 시 -->
+                <div class="modal fade" id="alert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="text-center mt-4">정상적으로 저장되었습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- alert2 case(2/2) : 저장 실패 시 -->
+                <div class="modal fade" id="alert2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="text-center mt-4">입력되지 않은 내용이 있습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- side-quick -->
+                <!-- <div class="side-quick">
+                    <div class="side-quick-inner">
+                        <div class="login-info">
+                            <div class="sq-item login-name">홍길동<span>님</span></div>
+                            <div class="btn-sq"><button type="button" class="btn">로그아웃</button></div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- //side-quick -->
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="copyright"> Copyrights © 2023 eutopos, co.ltd. All rights Reserved.</div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+</body>
+</html>

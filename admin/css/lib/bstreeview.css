@@ -1,0 +1,68 @@
+.bstreeview {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.bstreeview .list-group {
+    margin-bottom: 0;
+}
+
+.bstreeview .list-group-item {
+    display: flex;
+    border-radius: 0;
+    border-width: 1px 0 0 0;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+    border:none;
+}
+
+.bstreeview .list-group-item::before {content: ''; display: block; flex:none; background: url(/img/treeview_file.png) no-repeat left 3px top 3px; width: 20px; height: 20px;}
+
+.bstreeview .list-group-item:hover {
+    background-color:#dee2e6;
+}
+.bstreeview .list-group-item:hover .state-icon {background: #dee2e6;}
+
+.bstreeview > .list-group-item:first-child {
+    border-top-width: 0;
+}
+
+.bstreeview .state-icon {
+    flex: none;
+    width: auto;
+    height: 20px;
+    text-align: center;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+    margin-right: 3px;
+    margin-left: -20px;
+    background: #fff;
+}
+.bstreeview .list-group-item i::before {margin-top: 2px; content: '';}
+.bstreeview .list-group-item i::after {margin-top: 2px; content: '';}
+
+.bstreeview .bi-plus-circle-fill::before {background: url(/img/treeview_plus.png) no-repeat center; width: 7px; height: 7px; margin-right: 3px;}
+.bstreeview .bi-plus-circle-fill::after {background: url(/img/icon_file_close.png) no-repeat center; width: 20px; height: 20px;}
+.bstreeview .bi-dash-circle-fill::before {background: url(/img/treeview_dash.png) no-repeat center; width: 7px; height: 7px; margin-right: 3px;}
+.bstreeview .bi-dash-circle-fill::after {background: url(/img/icon_file_open.png) no-repeat center; width: 20px; height: 20px;}
+
+.bstreeview .item-icon {margin-right: 5px;}
+
+.bstreeview .list-group > div {padding-left: 3.5rem !important;}
+.bstreeview .list-group > div > div {padding-left: 2.5rem !important;}
+
+.bstreeview {padding-bottom: 5px;}
+.bstreeview .btn-group {margin: 10px 10px 5px 10px; padding-bottom: 10px; border-bottom: 1px solid #e4e4e4; }

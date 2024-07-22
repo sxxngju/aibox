@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>관리자</title>
+    <meta name="title" content="관리자">
+    <meta name="keywords" content="관리자">
+    <meta name="description" content="관리자">
+    <link rel="stylesheet" href="../../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-slider.css">
+    <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/lib/style.css">
+    <link rel="stylesheet" href="../../css/lib/style/index.css">
+
+    <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+    <script src="../../js/lib/bootstrap-slider.js"></script>
+    <script src="../../js/lib/ui.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+    <header class="header">
+        <div class="header-inner">
+
+            <!-- header-top -->
+            <div class="header-top">
+                <div class="btn-ht sideMenu">
+                    <button type="button" class="btn"><i class="bi bi-list"><span class="skip">메뉴 열고 닫기</span></i></button>
+                </div>
+                <div class="logo">
+                    <a href="#"> <h1 class="logo"><img src="../../img/logo-vertical.svg" alt="logo" /></h1></a>
+                </div>
+                <!-- <div class="btn-group util">
+                    <div class="btn-ht logout">
+                        <button type="button" class="btn"><i class="bi bi-box-arrow-right"><span class="skip">로그아웃</span></i></button>
+                    </div>
+                    <div class="btn-ht sideQuick">
+                        <button type="button" class="btn"><i class="bi bi-three-dots-vertical"><span class="skip">퀵메뉴 열고 닫기</span></i></button>
+                    </div>
+                </div> -->
+            </div>
+            <!-- //header-top -->
+
+            <!-- nav-->
+            <nav class="nav align-items-center">
+                <ul class="nav-inner">
+                    <li class="nav-item"><a href="./index.html">HOME</a></li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="./member_01.html" role="button" data-toggle="dropdown" aria-expanded="false">회원관리</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./member_01.html">회원관리</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">사이트관리</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./site_01.html">메인</a>
+                                <a class="dropdown-item" href="./site_02.html">이용약관</a>
+                                <a class="dropdown-item" href="./site_03.html">개인정보처리방침</a>
+                                <a class="dropdown-item" href="./site_04.html">개인정보수집동의</a>
+                                <a class="dropdown-item" href="./site_05.html">자주하는 질문</a>
+                                <a class="dropdown-item" href="./site_06.html">제휴/문의</a>
+                                <a class="dropdown-item" href="./site_07.html">팝업</a>
+                                <a class="dropdown-item" href="./site_08.html">공지</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="./data_01.html" role="button" data-toggle="dropdown" aria-expanded="false">데이터관리</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./data_01.html">받아쓰기</a>
+                                <a class="dropdown-item" href="./data_03.html">금지어 관리</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <div class="dropdown dropdownH">
+                            <a class="btn dropdown-toggle" href="./studio_01.html" role="button" data-toggle="dropdown" aria-expanded="false">스튜디오</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./studio_01.html">스튜디오</a>
+                                <a class="dropdown-item" href="./studio_01_01.html">만들기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="./authority_01.html">권한관리</a></li>
+                </ul>
+                <div class="nav-user ml-auto">
+                    <a href="./studio_01_01.html" class="btn btn-primary btn-large">스튜디오 만들기</a>
+                    <button type="button" data-toggle="dropdown" aria-expanded="false" class="btn dropdown-toggle">
+                        <img src="../../img/icon-user.svg" alt="user" />
+                        <div class="dropdown-menu logout">
+                            <a class="dropdown-item" href="#">내 정보</a>
+                            <a class="dropdown-item" href="./login.html" target="_self">로그아웃</a>
+                        </div>
+                    </button>
+                </div>
+            </nav>
+            <!-- //nav-->
+
+        </div>
+    </header>
+    <!-- //header -->
+
+        <!-- container -->
+        <div class="container">
+            <div class="container-inner">
+
+                <!-- content -->
+                <!-- Note. aside 없는 case: no_aside 추가  -->
+                <div class="content no_aside">
+                    <div class="content-inner">
+                        <div class="studio-wrap">
+                            <div class="studio-top">
+                                <div class="studio-date">
+                                    <span>2024-03-34 12:34:45</span>
+                                    <span>마지막 수정</span>
+                                    <span>등록/수정자(아이디)</span>
+                                </div>
+                                <div class="studio-title">
+                                    <!-- <img src="../../img/icon-question.svg" alt="icon"> -->
+                                    <h2>타이틀입니다 제목 내용이 들어갑니다.</h2>
+                                </div>
+                                <div class="btn-group btn-group-lg auto">
+                                    <button type="button" class="d-flex btn btn btn-dark" data-toggle="modal" data-target="#toastSave"><i class="icon icon-floppy filter_white mr-3"></i> 저장하기</button>
+                                    <button type="button" class="d-flex btn btn-outline-dark hover"><i class="icon icon-box-arrow-right mr-3"></i> 나가기</button>
+                                </div>
+                            </div>
+
+                            <div class="studio-box studio-left">
+                                <!-- step -->
+                                <div class="step-wrap">
+                                    <ul>
+                                        <li>1단계<br/>기본정보</li>
+                                        <li>2단계<br/>내용 구성</li>
+                                        <li class="active">3단계<br/>프롬프트 작성</li>
+                                        <li>4단계<br/>테스트</li>
+                                    </ul>
+                                </div>
+                                <!-- //step -->
+
+                                <div class="studio-inner">
+                                    <div class="page-title d-flex">
+                                        <h2 class="title flex-grow-1">프롬프트 작성</h2>
+                                    </div>
+
+                                    <strong class="option d-block">모델선택</strong>
+                                    <p class="text-secondary">툴을 실행시키기 위한 AI모델을 선택해주세요.</p>
+                                    <div class="main-contents-list">
+                                        <span class="blind-none">모델을 선택해주세요</span>
+                                        <select class="form-select" name="" id="">
+                                            <option>GPT-4</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <strong class="option d-block mt-5">출력 글자 수</strong>
+                                    <p class="text-secondary">사용자가 받아볼 수 있는 결과물의 최대 글자 수를 지정해주세요. 출력 글자 수에 비례하여 프롬프트에서 쓸 수 있는 글자 수가 조정됩니다.</p>
+                                    <div class="main-contents-list">
+                                        <div class="vol_slider">
+                                            <input id="mini" type="text">
+                                        </div>
+                                        <div class="text-secondary text-right">
+                                            <span id="miniVal">500</span>
+                                            <span>토큰 (한글 공백 포함 약 <span id="miniValKor">250</span>자 전후, 영문 공백 포함 약 <span id="miniEng">500</span>자 전후)</span>
+                                        </div>
+                                    </div>
+
+                                    <strong class="option d-block mt-5">프롬프트 입력</strong>
+                                    <p class="text-secondary">AI에게 명령할 내용을 입력해주세요.</p>
+                                    <div class="main-contents-list">
+                                        <textarea class="form-control" name="" id="" rows="5" placeholder="설명을 입력해주세요. 최대 500자까지"></textarea>
+                                    </div>
+                                    <div class="text-secondary text-right">
+                                        <span>현재 글자 수 : </span>
+                                        <span>0자 (0 byte)</span>
+                                        <span>입력 가능 토큰 : </span>
+                                        <span>0/2,000</span>
+                                    </div>
+
+                                    <a href="./studio_01_04.html" class="mt-5 w-100 btn btn-large btn-dark">다음</a>
+
+                                </div>
+                            </div>
+                            <div class="studio-box studio-right">
+                                <!-- 기본정보 -->
+                                <div class="studio-inner">
+                                    <h3 class="title">타이틀입니다 제목 내용이 들어갑니다.</h3>
+                                    <p class="text-secondary">설명글 내용이 들어갑니다.</p>
+                                    <div class="">
+                                        <span class="badge fill-primary">업무</span>
+                                        <span class="badge">회의록</span>
+                                    </div>
+                                    <!-- //기본정보 -->
+
+                                    <!-- 내용 구성 입력시 추가 -->
+                                    <div class="studio_addbox">
+                                        <strong class="option d-block">1. 목적 내용이 들어갑니다.</strong>
+                                        <p class="mt-2">회의목적</p>
+                                        <div class="graybox">
+                                            <p class="text-dark mb-0">회의목적 내용이 들어갑니다.</p>
+                                        </div>
+
+                                        <strong class="option d-block mt-5">2. 개요 내용이 들어갑니다.</strong>
+                                        <p class="mt-2">회의 개요 및 주요안건</p>
+                                        <div class="graybox">
+                                            <p class="text-dark mb-0">회의 개요 및 주요안건 내용이 들어갑니다.</p>
+                                        </div>
+
+                                        <strong class="option d-block mt-5">3. 내용이 들어갑니다.</strong>
+                                        <p class="mt-2">회의 주요 내용</p>
+                                        <div class="graybox">
+                                            <p class="text-dark mb-0">회의 주요 내용이 들어갑니다.</p>
+                                        </div>
+                                    </div>
+                                    <!-- //내용 구성 입력시 추가 -->
+
+                                    <div class="d-flex justify-content-center mt-5">
+                                        <button type="button" class="mt-auto btn btn-large btn-outline-dark">사용자 서비스 화면 미리보기</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //content -->
+
+                <!-- side-quick -->
+                <!-- <div class="side-quick">
+                    <div class="side-quick-inner">
+                        <div class="login-info">
+                            <div class="sq-item login-name">홍길동<span>님</span></div>
+                            <div class="btn-sq"><button type="button" class="btn">로그아웃</button></div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- //side-quick -->
+            </div>
+        </div>
+        <!-- //container -->
+
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+            <div class="copyright"> Copyrights © 2023 eutopos, co.ltd. All rights Reserved.</div>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+        <!-- toastSave -->
+        <div class="modal fade" id="toastSave" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="text-center mt-4">저장되었습니다.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //toastSave -->
+    </div>
+
+    <script>
+        $(window).on('load', function() {
+            initializeSlider();
+        });
+
+        function initializeSlider() {
+            // 값을 선택할 수 있는 슬라이더 출력
+            $('.vol_slider').slider({
+                min: 0,
+                max: 1000,
+                step: 50,
+                value: 500,
+                tooltip: 'always',
+                formatter: function(value) {
+                    return '현재값: ' + value.toLocaleString();
+                }
+            });
+
+            // 슬라이더에서 선택한 값을 출력하는 부분
+            $('.vol_slider').on('slide', function(slideEvt) {
+                $('#miniVal').text(slideEvt.value.toLocaleString());
+                $('#miniValKor').text(Math.round(slideEvt.value/2).toLocaleString());
+                $('#miniEng').text(slideEvt.value.toLocaleString());
+            });
+        }
+    </script>
+</body>
+</html>

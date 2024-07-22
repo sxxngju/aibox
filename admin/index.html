@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+	<meta charset="UTF-8">
+	<title>관리자 HTML</title>
+	<style>
+		* {margin:0;padding:0;}
+            h1 {padding:15px 20px 15px 20px;font-size:24px;background:#ececec;}
+            .stat {padding:10px 10px;}
+            .stat p {display:inline-block;margin-left:10px;font-size:12px;}
+            h2 {margin:30px 20px 0px 20px;}
+            table {width:calc(100% - 40px);margin:0 20px 50px 20px;border-collapse:collapse;border-top:2px solid #ccc; border-bottom:1px solid #ccc;}
+            th {padding:10px 20px;font-size:12px;border-top:1px solid #ccc;background:#ececec;}
+            td {padding:5px 20px;font-size:12px;border-top:1px solid #ccc; text-align: center;}
+            td:nth-child(1),
+			/* td:nth-child(4), */
+			td:nth-child(10)  {text-align:center;}
+			.tr-top td {border-top-color: #777;}
+			.text-left {text-align: left;}
+			.fix {color: red;}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script>
+			// $(function() {
+			// 	var trNum = $('table tr').length + 1;
+			// 	for(i = 0; i < trNum; i++){
+			// 		$('table tr:nth-child(' + i + ') td:first-child').text(i-1);
+			// 		linktext = $('table tr:nth-child(' + i + ') td:nth-child(7)').text();
+
+			// 		if ($('table tr:nth-child(' + i + ') td')) {
+						
+			// 		} else {
+						
+			// 		}
+
+			// 		if($('table tr:nth-child(' + i + ') td:nth-child(8)').text() == '완료'){
+			// 				$('table tr:nth-child(' + i + ') td:nth-child(7)').html('<a href="html/'+ linktext +'" target="_blank">'+ linktext +'</a>')
+			// 		}
+			// 		if($('table tr:nth-child(' + i + ') td:nth-child(8)').text() == '진행중'){
+			// 				$('table tr:nth-child(' + i + ') td:nth-child(7)').html('<a href="html/'+ linktext +'" target="_blank">'+ linktext +'</a>')
+			// 		}
+			// 	}
+				
+			// 	$('.stat .page-total').text(trNum - 2)
+			// 	$('.stat .page-ing').text($('.table1 td:nth-child(8):contains("진행중")').length)
+			// 	$('.stat .page-comp').text($('.table1 td:nth-child(8):contains("완료")').length)
+			// });
+
+			function processTable(tableSelector, statSelector) {
+				var trNum = $(tableSelector + ' tr').length;
+				for (var i = 1; i < trNum; i++) {
+						var $tr = $(tableSelector + ' tr:nth-child(' + i + ')');
+						$tr.find('td:first-child').text(i - 1);
+						var linktext = $tr.find('td:nth-child(7)').text();
+						if ($tr.find('td:nth-child(8)').text() === '완료' || $tr.find('td:nth-child(8)').text() === '진행중') {
+							if (tableSelector === '.table1') {
+									$tr.find('td:nth-child(7)').html('<a href="html/' + linktext + '" target="_blank">' + linktext + '</a>');
+							} else if (tableSelector === '.table2') {
+									$tr.find('td:nth-child(7)').html('<a href="html/pages/' + linktext + '" target="_blank">' + linktext + '</a>');
+							}
+					}
+				}
+				var total = trNum - 1;
+				var ing = $(tableSelector + ' td:nth-child(8):contains("진행중")').length;
+				var comp = $(tableSelector + ' td:nth-child(8):contains("완료")').length;
+				$(statSelector + ' .page-total').text(total);
+				$(statSelector + ' .page-ing').text(ing);
+				$(statSelector + ' .page-comp').text(comp);
+			}
+
+			$(function() {
+					processTable('.table1', '.stat1');
+					processTable('.table2', '.stat2');
+			});
+
+    </script>
+</head>
+
+<body>
+	<h1>관리자 HTML</h1>
+	<h2>PC Ver</h2>
+
+	<div class="stat stat1">
+		<p>총 페이지 : <span class="page-total"></span> 페이지</p>
+		<p>진행중 : <span class="page-ing"></span> 페이지</p>
+		<p>완료 : <span class="page-comp"></span> 페이지</p>
+	</div>
+	<table class="table1">
+		<colgroup>
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+		</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>구분</th>
+			<th>1dep</th>
+			<th>2dep</th>
+			<th>3dep</th>
+			<th>4dep</th>
+			<th>파일명</th>
+			<th>작업상황</th>
+			<th>비고</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>메인</td>
+			<td>로그인</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>login.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>로그인 인증</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>login_acc.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>약관동의</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>login_terms.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>레이아웃</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>layout.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		</tr>
+		<tr>
+			<td></td>
+			<td>가이드</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>guide.html</td>
+			<td>진행중</td>
+			<td></td>
+		</tr>
+		<tr class="tr-top">
+			<td></td>
+			<td>컨텐츠 레이아웃</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>layout_content.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>대시보드</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>dashboard.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>게시판</td>
+			<td>목록</td>
+			<td>기본</td>
+			<td></td>
+			<td></td>
+			<td>board.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>form / 상태</td>
+			<td></td>
+			<td></td>
+			<td>board_form.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>card</td>
+			<td></td>
+			<td></td>
+			<td>board_card.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>상세</td>
+			<td>.table1 + list</td>
+			<td></td>
+			<td></td>
+			<td>board_view.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>등록/수정 - 게시판</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>board_write.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>등록/수정 - form게시판</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>board_write2.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>댓글</td>
+			<td></td>
+			<td></td>
+			<td>board_reply.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>배너 게시판</td>
+			<td>목록</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>banner.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>배너 미리보기 팝업(PC/Mobile)</td>
+			<td></td>
+			<td></td>
+			<td>banner_popup.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>상세/등록/수정</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>banner_view.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>트리뷰 게시판</td>
+			<td>목록</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>treeview.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>상세/수정/등록</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>treeview_view.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>탭메뉴</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>tab.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>팝업</td>
+			<td>레이어 팝업 / 새 창 팝업</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>popup.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>기타</td>
+			<td>에러</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>error.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<!-- <tr>
+			<td></td>
+			<td></td>
+			<td>메뉴명</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>메뉴명.html</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>메뉴명</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>메뉴명.html</td>
+			<td></td>
+			<td></td>
+		</tr> -->
+	</table>
+
+	<h2>메뉴구조도</h2>
+	<div class="stat stat2">
+		<p>총 페이지 : <span class="page-total"></span> 페이지</p>
+		<p>진행중 : <span class="page-ing"></span> 페이지</p>
+		<p>완료 : <span class="page-comp"></span> 페이지</p>
+	</div>
+	<table class="table2">
+		<colgroup>
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+			<col width="" >
+		</colgroup>
+		<tr>
+			<th>No.</th>
+			<th>구분</th>
+			<th>1dep</th>
+			<th>2dep</th>
+			<th>3dep</th>
+			<th>4dep</th>
+			<th>파일명</th>
+			<th>작업상황</th>
+			<th>비고</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>로그인</td>
+			<td>login</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>login.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>HOME</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>index.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- 텍스트 수정<br/>
+				- [사용추이] 표기 수정
+				<p class="fix">2024-07-10 수정</p>
+				- header 신고 버튼 삭제
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>회원관리</td>
+			<td>회원관리</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>member_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- default checked 설정<br/>
+				- 받아쓰기 링크 삭제
+				<p class="fix">2024-07-10 수정</p>
+				- 회원상태 radio "전체" 요소가 기본 checked
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>사이트관리</td>
+			<td>메인</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- 에러 문구 수정
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>추천 AI서비스</td>
+			<td></td>
+			<td></td>
+			<td>site_01_02.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- 추천 AI서비스 탭 페이지 추가<br/>
+				- 콘텐츠 등록 팝업 위치 영역 필드 최대 6개 까지 출력
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>영역 등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_01_pop1.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>콘텐츠 등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_01_pop2.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>업무경감</td>
+			<td></td>
+			<td></td>
+			<td>site_01_03.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- 마지막 셀 제목 클릭 가능하게 수정
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>이용약관</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_02.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_02_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- 현재 | 예약 게시일자 설정 기능 삭제 
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>개인정보처리방침</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_03.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_03_01.html</td>
+			<td>완료</td>
+			<td>
+				<p class="fix">2024-07-10 수정</p>
+				- 현재 | 예약 부분 삭제
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>개인정보 수집 및 이용동의</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_04.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_04_01.html</td>
+			<td>완료</td>
+			<td>
+				<p class="fix">2024-07-10 수정</p>
+				- 현재 | 예약 부분 삭제
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>자주하는 질문</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_05.html</td>
+			<td>완료</td>
+			<td>
+				<p class="fix">2024-07-10 수정</p>
+				- 검색 select option 변경 [제목, 등록자]
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_05_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- 첨부파일 가이드문구 수정
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>제휴 문의</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_06.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- [등록] 버튼 삭제
+				<p class="fix">2024-07-10 수정</p>
+				- 검색 select option 변경 [전체, 제목, 내용, 회사명, 제안자명]
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>상세</td>
+			<td></td>
+			<td></td>
+			<td>site_06_01.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>팝업</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_07.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-11 수정</p>
+				- 팝업 > 리스트 페이지 신규 추가
+				<p class="fix">2024-07-10 수정</p>
+				- 이미지 파일 input 안내 문구 변경 "파일형식(jpg, png 영어만 허용), 최대 2MB까지"
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_07_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-11 수정</p>
+				- 게시여부 필드 추가
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>공지</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>site_08.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>site_08_01.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>데이터관리</td>
+			<td>받아쓰기</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>data_01.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>등록/수정</td>
+			<td></td>
+			<td></td>
+			<td>data_01_01.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>금지어 관리</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>data_03.html</td>
+			<td>완료</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>스튜디오</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>studio_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- [스튜디오 만들기] 버튼 클릭 시 해당 페이지로 이동 수정
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>만들기/수정</td>
+			<td>step1</td>
+			<td></td>
+			<td></td>
+			<td>studio_01_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-11 수정</p>
+				- .step-wrap > a 제거<br/>
+				- 페이지 타이틀 추가<br/>
+				- 카테고리 항목 추가<br/>
+				(아우터 클래스 추가)
+				<p class="fix">2024-07-10 수정</p>
+				- 카테고리 input type 변경 (checkbox -> radio)
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>step2</td>
+			<td>한줄 입력 case</td>
+			<td></td>
+			<td>studio_01_02.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-11 수정</p>
+				- .step-wrap > a 제거<br/>
+				<p class="fix">2024-06-24 수정</p>
+				- tab > btn 수정 <br/>
+				- badge -> checkbox 변경
+				<p class="fix">2024-06-25 수정</p>
+				- style 수정
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>여러줄 입력 case</td>
+			<td></td>
+			<td>studio_01_02_2.html</td>
+			<td>-</td>
+			<td class="text-left">
+				페이지 사용 안함<br/>
+				studio_01_02에서 탭이동
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>드롭다운(단일) case</td>
+			<td></td>
+			<td>studio_01_02_3.html</td>
+			<td>-</td>
+			<td class="text-left">
+				페이지 사용 안함<br/>
+				studio_01_02에서 탭이동
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>옵션 버튼(복수) case</td>
+			<td></td>
+			<td>studio_01_02_4.html</td>
+			<td>-</td>
+			<td class="text-left">
+				페이지 사용 안함<br/>
+				studio_01_02에서 탭이동
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>step3</td>
+			<td></td>
+			<td></td>
+			<td>studio_01_03.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-11 수정</p>
+				- .step-wrap > a 제거<br/>
+				- slider 토큰값 산출 스크립트 추가
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>step4</td>
+			<td></td>
+			<td></td>
+			<td>studio_01_04.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-11 수정</p>
+				- .step-wrap > a 제거<br/>
+				- 자동생성 버튼 위치 수정
+				<p class="fix">2024-06-28 수정</p>
+				- [자동 생성 결과] 하단 텍스트 삭제
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>권한관리</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>authority_01.html</td>
+			<td>완료</td>
+			<td class="text-left">
+				<p class="fix">2024-06-25 수정</p>
+				- 검색 조건 추가<br/>
+				- 관리자 계정 등록 팝업 비밀번호 입력칸 추가
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td>빈화면</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>

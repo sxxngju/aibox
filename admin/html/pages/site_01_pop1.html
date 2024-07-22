@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>관리자</title>
+        <meta name="title" content="관리자" />
+        <meta name="keywords" content="관리자" />
+        <meta name="description" content="관리자" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="../../css/lib/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../../css/lib/style.css" />
+        <link rel="stylesheet" href="../../css/lib/style/index.css" />
+
+        <script src="../../js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../../js/lib/bootstrap.bundle.min.js"></script>
+        <script src="../../js/lib/bootstrap-datepicker.min.js"></script>
+        <script src="../../js/lib/ui.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script>
+        <script>
+            $(function () {
+                $('.main-list').sortable().disableSelection();
+            });
+        </script>
+    </head>
+    <body class="modal-open">
+        <div class="wrap">
+            <!-- popup : 메인 영역 관리 창 -->
+            <div
+                class="modal fade show"
+                id="popup"
+                style="display: block"
+                role="dialog"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="false"
+            >
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header modal-default">
+                            <h5 class="modal-title pl-0" id="exampleModalLabel">메인 영역 관리</h5>
+                        </div>
+                        <div class="modal-body">
+                            <!-- 입력창 -->
+                            <div class="d-flex">
+                                <input type="text" class="form-control resize" name="" id="" placeholder="영역 이름 입력 최대 20자" />
+                                <button type="submit" class="btn btn-lg btn-dark">추가</button>
+                            </div>
+                            <!-- 리스트 -->
+                            <ul class="main-list">
+                                <li class="d-flex align-items-center">
+                                    <input class="flex-grow-1" type="text" contenteditable="true" placeholder="추천 AI" readonly />
+                                    <div class="btn-group btn-group-lg type3">
+                                        <button type="button" class="btn btn-secondary mr-0">on</button>
+                                        <button type="button" class="btn btn-outline-secondary">off</button>
+                                    </div>
+                                    <!-- delete icon -->
+                                    <button type="button" class="btn ml-1 blind">
+                                        <img src="../../img/icon-trash.svg" alt="delete" />
+                                    </button>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input class="flex-grow-1" type="text" contenteditable="true" placeholder="AI 스토어" readonly />
+                                    <div class="btn-group btn-group-lg type3">
+                                        <button type="button" class="btn btn-secondary mr-0">on</button>
+                                        <button type="button" class="btn btn-outline-secondary">off</button>
+                                    </div>
+                                    <!-- delete icon -->
+                                    <button type="button" class="btn ml-1 blind">
+                                        <img src="../../img/icon-trash.svg" alt="delete" />
+                                    </button>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <input class="flex-grow-1 renewable" type="text" contenteditable="true" placeholder="테스트" />
+                                    <div class="btn-group btn-group-lg type3">
+                                        <button type="button" class="btn btn-outline-secondary mr-0">on</button>
+                                        <button type="button" class="btn btn-secondary">off</button>
+                                    </div>
+                                    <!-- delete icon : 등록된 콘텐츠 있을 시 alert, 없을 경우 삭제 / 추천 AI와 AI 스토어 삭제 불가  -->
+                                    <button type="button" class="btn ml-1" data-toggle="modal" data-target="#alert2">
+                                        <img src="../../img/icon-trash.svg" alt="delete" />
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-large btn-dark">확인</button>
+                            <button type="button" class="btn btn-large btn-outline-secondary" data-dismiss="modal">취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //popup -->
+
+            <!-- alert1 -->
+            <div class="modal fade" id="alert" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="text-center mt-4">선택된 내용을 메인에서 제외 하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //alert1 -->
+
+            <!-- alert2 -->
+            <div class="modal fade" id="alert2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p class="text-center mt-4">
+                                영역을 삭제하시겠습니까?<br /><span class="text-primary">등록된 콘텐츠는 게시 안함으로 변경됩니다.</span>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-lg btn-outline-dark" data-dismiss="modal">닫기</button>
+                            <button type="button" class="btn btn-lg btn-dark">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //alert2 -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>관리자</title>
+    <meta name="title" content="관리자">
+    <meta name="keywords" content="관리자">
+    <meta name="description" content="관리자">
+    <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/lib/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="../css/lib/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/lib/style.css">
+    
+    <script src="../js/lib/jquery-3.6.0.min.js"></script>
+    <script src="../js/lib/bootstrap.bundle.min.js"></script>
+    <script src="../js/lib/bootstrap-datepicker.min.js"></script>
+    <script src="../js/lib/ui.js"></script>
+
+</head>
+<body>
+    <!-- popup -->
+    <div class="wrap type2">
+        <!-- header -->
+        <div class="modal-header">
+            <h5 class="modal-title">제목</h5>
+        </div>
+        <!-- body -->
+        <div class="modal-body">
+            <!-- start -->
+            <h3 class="title">검색</h3>
+            <table class="table table-type2">
+                <colgroup>
+                    <col style="width: 15%;">
+                    <col style="width: 30%;">
+                    <col style="width: 15%;">
+                    <col style="width: 30%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">항목</th>
+                        <td><div class="d-flex">
+                            <input type="text" class="form-control" name="" id="">
+                        </div></td>
+                        <th scope="row">항목</th>
+                        <td><div class="d-flex">
+                            <label class="form-raido"><input type="radio" name="radio" id="" checked="checked"> <span>내용</span></label>
+                            <label class="form-raido"><input type="radio" name="radio" id=""> <span>내용</span></label>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">항목</th>
+                        <td>
+                            <div class="d-flex">
+                                <select class="form-select" name="" id="">
+                                    <option>옵션</option>
+                                    <option>옵션</option>
+                                    <option>옵션</option>
+                                </select>
+                            </div>
+                        </td>
+                        <th scope="row">항목</th>
+                        <td><div class="d-flex">
+                            <label class="form-check"><input type="checkbox" name="" id="" checked="checked"> <span>내용</span></label>
+                            <label class="form-check"><input type="checkbox" name="" id=""> <span>내용</span></label>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- btn-group -->
+            <div class="btn-group btn-group-lg type1 auto center">
+                <button type="button" class="btn btn-secondary">초기화</button>
+                <button type="button" class="btn btn-primary">검색</button>
+            </div>
+
+            <div class="table-top">
+                <div class="result-total flex-grow-1">
+                    <select class="form-select" name="" id="">
+                        <option selected="selected">20 건씩 보기</option>
+                        <option>40 건씩 보기</option>
+                        <option>60 건씩 보기</option>
+                        <option>80 건씩 보기</option>
+                        <option>1000 건씩 보기</option>
+                    </select>
+                    총 <span class="text-danger">3</span>건, 1 of 1 page
+                </div>
+                <div class="btn-group btn-group-lg auto">
+                    <a href="#" class="btn btn-primary">엑셀다운로드</a>
+                </div>
+            </div>
+
+            <!-- table -->
+            <table class="table table-type1">
+                <colgroup>
+                    <col style="width: 12%;">
+                    <col style="width: auto;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                    <col style="width: 12%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">항목</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">항목</th>
+                        <th scope="col">항목</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><a href="#">게시판 상세페이지 이동</a></td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">데이터가 없습니다.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- paging -->
+            <div class="paging">
+                <ul class="pagination pagination-lg">
+                    <li class="page-item disabled">
+                        <a class="page-link arrow" href="#"><i class="bi bi-chevron-double-left"><span class="skip">첫 페이지</span></i></a>
+                    </li>
+                    <li class="page-item disabled">
+                        <a class="page-link arrow" href="#"><i class="bi bi-chevron-left"><span class="skip">이전페이지</span></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item"><a class="page-link" href="#">6</a></li>
+                    <li class="page-item"><a class="page-link" href="#">7</a></li>
+                    <li class="page-item"><a class="page-link" href="#">8</a></li>
+                    <li class="page-item"><a class="page-link" href="#">9</a></li>
+                    <li class="page-item">
+                        <a class="page-link arrow" href="#"><i class="bi bi-chevron-right"><span class="skip">다음페이지</span></i></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link arrow" href="#"><i class="bi bi-chevron-double-right"><span class="skip">마지막 페이지</span></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end -->
+        </div>
+        <!-- footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-lg btn-outline-dark"onclick="window.open('about:blank', '_self').close()">닫기</button>
+            <button type="button" class="btn btn-lg btn-dark">버튼</button>
+        </div>
+    </div>
+    <!-- //popup -->
+</body>
+</html>

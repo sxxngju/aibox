@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>관리자</title>
+        <meta name="title" content="관리자" />
+        <meta name="keywords" content="관리자" />
+        <meta name="description" content="관리자" />
+        <link rel="stylesheet" href="../css/lib/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/lib/bootstrap-datepicker.min.css" />
+        <link rel="stylesheet" href="../css/lib/bootstrap-icons.css" />
+        <link rel="stylesheet" href="../css/lib/style.css" />
+        <link rel="stylesheet" href="../css/lib/style/index.css" />
+
+        <script src="../js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../js/lib/bootstrap.bundle.min.js"></script>
+        <script src="../js/lib/bootstrap-datepicker.min.js"></script>
+        <script src="../js/lib/ui.js"></script>
+        <style>
+            .wrap {
+                padding: 20px !important;
+            }
+            [class^='guide-outer'] {
+                padding: 20px;
+                margin-bottom: 40px;
+                border: 1px solid #000;
+            }
+            [class^='guide-outer']:first-of-type {
+                margin-top: 20px;
+            }
+            [class^='guide-outer'] > h1.title {
+                margin: -20px -20px 0 -20px;
+                width: calc(100% + 40px);
+                background: #eee;
+                padding: 10px;
+            }
+            .option {
+                margin: 10px 0 20px;
+                padding-bottom: 10px;
+                font-weight: 500;
+                color: #333;
+                border-bottom: 1px dashed #ccc;
+            }
+            .g-block {
+                display: block;
+                height: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap type1">
+            <!-- guide -->
+            <div class="guide-outer guide-outer-btn">
+                <h1 class="title">button</h1>
+
+                <p class="option">부트스트랩 기본 버튼</p>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <p></p>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-light">Light</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+
+                <p class="option">버튼 정렬</p>
+                가운데<br />
+                <div class="btn-group btn-group-lg type1 auto center">
+                    <button type="button" class="btn btn-secondary">초기화</button>
+                    <button type="button" class="btn btn-primary">검색</button>
+                </div>
+                오른쪽<br />
+                <div class="btn-group btn-group-lg auto justify-content-end">
+                    <button type="button" class="btn btn-primary">등록</button>
+                </div>
+                좌우 정렬1<br />
+                <div class="table-top">
+                    <div class="btn-group btn-group-lg auto flex-grow-1">
+                        <a href="#" class="btn btn-outline-primary">버튼1</a>
+                        <a href="#" class="btn btn-outline-primary">버튼2</a>
+                        <a href="#" class="btn btn-outline-primary">버튼3</a>
+                    </div>
+                    <div class="btn-group btn-group-lg auto">
+                        <a href="#" class="btn btn-primary">버튼</a>
+                    </div>
+                </div>
+
+                좌우 정렬2<br />
+                <div class="table-top">
+                    <div class="result-total flex-grow-1">
+                        <select class="form-select" name="" id="">
+                            <option selected="selected">20 건씩 보기</option>
+                            <option>40 건씩 보기</option>
+                            <option>60 건씩 보기</option>
+                            <option>80 건씩 보기</option>
+                            <option>1000 건씩 보기</option>
+                        </select>
+                        총 <span class="text-danger">3</span>건, 1 of 1 page
+                    </div>
+                    <div class="btn-group btn-group-lg auto">
+                        <a href="#" class="btn btn-primary">엑셀다운로드</a>
+                        <a href="#" class="btn btn-outline-primary">등록</a>
+                    </div>
+                </div>
+
+                <p class="option">기타</p>
+                <div class="btn-group btn-group-lg auto">
+                    <a href="#" class="btn btn-outline-dark"><i class="bi bi-list"></i>목록형</a>
+                    <a href="#" class="btn btn-secondary"><i class="bi bi-grid-fill"></i>카드형</a>
+                </div>
+            </div>
+
+            <div class="guide-outer">
+                <h1 class="title">badge</h1>
+                <p class="option">badge 기본</p>
+                <span class="badge fill-primary">Primary</span>
+                <span class="badge fill-secondary">Secondary</span>
+                <span class="badge fill-success">Success</span>
+                <span class="badge fill-danger">Danger</span>
+                <span class="badge fill-warning">Warning</span>
+                <span class="badge fill-info">Info</span>
+                <span class="badge fill-light">Light</span>
+                <span class="badge fill-dark">Dark</span>
+            </div>
+
+            <!-- guide -->
+            <div class="guide-outer">
+                <h1 class="title">input</h1>
+
+                <span class="g-block"></span>
+
+                <input type="text" class="form-control" name="" id="" value="내용" disabled="disabled" />
+
+                <span class="g-block"></span>
+
+                <select class="form-select" name="" id="">
+                    <option>옵션</option>
+                </select>
+
+                <span class="g-block"></span>
+
+                <div class="d-flex">
+                    <label class="form-raido"><input type="radio" name="radio" id="" checked="checked" /> <span>내용</span></label>
+                    <label class="form-raido"><input type="radio" name="radio" id="" /> <span>내용</span></label>
+                </div>
+
+                <span class="g-block"></span>
+
+                <div class="d-flex">
+                    <label class="form-check"><input type="checkbox" name="" id="" checked="checked" /> <span>내용</span></label>
+                    <label class="form-check"><input type="checkbox" name="" id="" /> <span>내용</span></label>
+                </div>
+
+                <div class="d-flex">
+                    <label class="mr-4 login-checkbox"><input type="checkbox" name="" id="" /> <span>Default</span></label>
+                    <label class="mr-4 login-checkbox disabled"
+                        ><input type="checkbox" name="" id="" disabled /> <span>Disabled</span></label
+                    >
+                    <label class="mr-4 login-checkbox"
+                        ><input type="checkbox" name="" id="" checked="checked" /> <span>Selected</span></label
+                    >
+                </div>
+
+                <span class="g-block"></span>
+
+                <textarea class="form-control" name="" id="" rows="5"></textarea>
+
+                <p class="option">input 유형</p>
+                <div class="col-7">
+                    <div class="d-flex col-4">
+                        <input type="text" class="form-control" name="" id="" />
+                        <select class="form-select" name="" id="">
+                            <option>옵션</option>
+                            <option>옵션</option>
+                            <option>옵션</option>
+                        </select>
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div class="form-calendar col-4">
+                        <input type="text" class="form-control datepicker" />
+                        <span>~</span>
+                        <input type="text" class="form-control datepicker" />
+                        <div class="btn-group type2 auto">
+                            <button type="button" class="btn btn-secondary">오늘</button>
+                            <button type="button" class="btn btn-secondary">일주일</button>
+                            <button type="button" class="btn btn-secondary">15일</button>
+                            <button type="button" class="btn btn-secondary">한달</button>
+                            <button type="button" class="btn btn-secondary">두달</button>
+                        </div>
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div class="form-calendar type2 col-11">
+                        <input type="text" class="form-control datepicker flex-1" />
+                        <select class="form-select w60p" name="" id="">
+                            <option value="00">00시</option>
+                            <option value="01">01시</option>
+                            <option value="02">02시</option>
+                            <option value="03">03시</option>
+                            <option value="04">04시</option>
+                            <option value="05">05시</option>
+                            <option value="06">06시</option>
+                            <option value="07">07시</option>
+                            <option value="08">08시</option>
+                            <option value="09">09시</option>
+                            <option value="10">10시</option>
+                            <option value="11">11시</option>
+                            <option value="12">12시</option>
+                            <option value="13">13시</option>
+                            <option value="14">14시</option>
+                            <option value="15">15시</option>
+                            <option value="16">16시</option>
+                            <option value="17">17시</option>
+                            <option value="18">18시</option>
+                            <option value="19">19시</option>
+                            <option value="20">20시</option>
+                            <option value="21">21시</option>
+                            <option value="22">22시</option>
+                            <option value="23">23시</option>
+                        </select>
+                        <select class="form-select w60p" name="" id="">
+                            <option value="00">00분</option>
+                            <option value="05">05분</option>
+                            <option value="10">10분</option>
+                            <option value="15">15분</option>
+                            <option value="20">20분</option>
+                            <option value="25">25분</option>
+                            <option value="30">30분</option>
+                            <option value="35">35분</option>
+                            <option value="40">40분</option>
+                            <option value="45">45분</option>
+                            <option value="50">50분</option>
+                            <option value="55">55분</option>
+                        </select>
+                        <span>~</span>
+                        <input type="text" class="form-control datepicker flex-1" />
+                        <select class="form-select w60p" name="" id="">
+                            <option value="00">00시</option>
+                            <option value="01">01시</option>
+                            <option value="02">02시</option>
+                            <option value="03">03시</option>
+                            <option value="04">04시</option>
+                            <option value="05">05시</option>
+                            <option value="06">06시</option>
+                            <option value="07">07시</option>
+                            <option value="08">08시</option>
+                            <option value="09">09시</option>
+                            <option value="10">10시</option>
+                            <option value="11">11시</option>
+                            <option value="12">12시</option>
+                            <option value="13">13시</option>
+                            <option value="14">14시</option>
+                            <option value="15">15시</option>
+                            <option value="16">16시</option>
+                            <option value="17">17시</option>
+                            <option value="18">18시</option>
+                            <option value="19">19시</option>
+                            <option value="20">20시</option>
+                            <option value="21">21시</option>
+                            <option value="22">22시</option>
+                            <option value="23">23시</option>
+                        </select>
+                        <select class="form-select w60p" name="" id="">
+                            <option value="00">00분</option>
+                            <option value="05">05분</option>
+                            <option value="10">10분</option>
+                            <option value="15">15분</option>
+                            <option value="20">20분</option>
+                            <option value="25">25분</option>
+                            <option value="30">30분</option>
+                            <option value="35">35분</option>
+                            <option value="40">40분</option>
+                            <option value="45">45분</option>
+                            <option value="50">50분</option>
+                            <option value="55">55분</option>
+                        </select>
+                        <div class="btn-group type2 auto">
+                            <button type="button" class="btn btn-secondary">오늘</button>
+                            <button type="button" class="btn btn-secondary">일주일</button>
+                            <button type="button" class="btn btn-secondary">15일</button>
+                            <button type="button" class="btn btn-secondary">한달</button>
+                            <button type="button" class="btn btn-secondary">두달</button>
+                        </div>
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div class="d-flex col-4">
+                        <input type="text" class="form-control" name="" id="" />
+                        <div class="btn-group type2 auto">
+                            <button type="button" class="btn btn-secondary">중복확인</button>
+                        </div>
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div>
+                        <div class="d-flex flex-wrap col-6">
+                            <input type="text" class="form-control col-3" name="" id="" />
+                            <div class="btn-group type2 ml-1 auto">
+                                <button type="button" class="btn btn-secondary">우편번호</button>
+                            </div>
+                        </div>
+                        <div class="d-flex col-6 mt-2">
+                            <input type="text" class="form-control" name="" id="" />
+                            <input type="text" class="form-control" name="" id="" />
+                        </div>
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div class="d-flex col-3">
+                        <select class="form-select" name="" id="">
+                            <option>010</option>
+                        </select>
+                        <span class="dash">-</span>
+                        <input type="text" class="form-control" name="" id="" />
+                        <span class="dash">-</span>
+                        <input type="text" class="form-control" name="" id="" />
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div class="d-flex col-5">
+                        <input type="text" class="form-control" name="" id="" />
+                        <span class="dash">@</span>
+                        <input type="text" class="form-control" name="" id="" />
+                        <select class="form-select" name="" id="">
+                            <option>직접입력</option>
+                        </select>
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div class="input-group col-6">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="" />
+                            <label class="custom-file-label" for="">첨부 파일</label>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary ml-1">삭제</button>
+                    </div>
+
+                    <span class="g-block"></span>
+
+                    <div class="d-flex flex-column col-4">
+                        <div class="img-thumbnail"><img src="/img/bg_error.png" alt="" /></div>
+                        <div>
+                            <div class="input-group mt-3">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="" />
+                                    <label class="custom-file-label" for="">첨부 파일</label>
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-secondary ml-1">삭제</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group col-4 align-items-center">
+                        <div class="custom-file upload-custom-file">
+                            <input type="file" class="custom-file-input" id="" />
+                            <label class="custom-file-label" for="">이미지파일명.확장자(파일크기)</label>
+                        </div>
+                        <button type="button" class="btn"><img src="../img/icon-plus.svg" alt="delete" /></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- guide -->
+            <div class="guide-outer">
+                <h1 class="title">title</h1>
+
+                <p class="option">h3 타이틀</p>
+                <h3 class="title">타이틀</h3>
+                <h3 class="title type1">타이틀 type1 : mb0</h3>
+                <br />
+                <h3 class="title"><span class="text-primary">타이틀</span> 컬러</h3>
+                <div class="table-top type1">
+                    <div class="flex-grow-1"><h3 class="title type1">타이틀</h3></div>
+                    <div class="necess mt-auto"><span class="ncs">*</span> 표시된 항목은 필수 입력 사항입니다.</div>
+                </div>
+                <div class="table-top align-items-end">
+                    <h3 class="title type1 flex-grow-1">타이틀명</h3>
+                    <div class="btn-group btn-group-lg auto">
+                        <a href="#" class="btn btn-primary">버튼명</a>
+                    </div>
+                </div>
+
+                <p class="option">컨텐츠 타이틀</p>
+                <p class="s-title1">타이틀</p>
+            </div>
+
+            <!-- guide -->
+            <div class="guide-outer">
+                <h1 class="title">text - 부트스트랩 기본</h1>
+
+                <p class="option">color</p>
+                <p class="text-primary">text-primary</p>
+                <p class="text-secondary">text-secondary</p>
+                <p class="text-success">text-success</p>
+                <p class="text-danger">text-danger</p>
+                <p class="text-warning">text-warning</p>
+                <p class="text-info">text-info</p>
+                <p class="text-light">text-light</p>
+                <p class="text-dark">text-dark</p>
+
+                <p class="option">bold</p>
+                <p class="font-weight-bold">font-weight-bold</p>
+                <p class="font-weight-bolder">font-weight-bolder</p>
+                <p class="font-weight-normal">font-weight-normal</p>
+                <p class="font-weight-light">font-weight-light</p>
+                <p class="font-weight-lighter">font-weight-lighter</p>
+                <p class="font-italic">font-italic</p>
+
+                <p class="option">size</p>
+                <p class="font12">font12</p>
+                <p class="font13">font13</p>
+                <p class="font14">font14</p>
+                <p class="font16">font16</p>
+                <p class="font18">font18</p>
+                <p class="font20">font20</p>
+
+                <p class="option">정렬</p>
+                <p class="text-left">왼쪽 정렬</p>
+                <p class="text-center">가운데 정렬</p>
+                <p class="text-right">오른쪽 정렬</p>
+            </div>
+
+            <!-- guide -->
+            <div class="guide-outer">
+                <h1 class="title">text list</h1>
+
+                <p class="option">list</p>
+                <div class="list-text bar">
+                    <ul class="list-text-inner">
+                        <li>텍스트 리스트 입니다.</li>
+                        <li>텍스트 리스트 입니다.</li>
+                    </ul>
+                </div>
+
+                <p class="option">text-box + list</p>
+                <div class="text-box1">
+                    <div class="text-box-inner">
+                        <p class="s-title1">타이틀</p>
+                        <div class="list-text bar mb-5">
+                            <ul class="list-text-inner">
+                                <li>텍스트 리스트 입니다.</li>
+                                <li>텍스트 리스트 입니다.</li>
+                            </ul>
+                        </div>
+                        <p class="s-title1">타이틀</p>
+                        <div class="list-text bar">
+                            <ul class="list-text-inner">
+                                <li>텍스트 리스트 입니다.</li>
+                                <li>텍스트 리스트 입니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- guide -->
+            <div class="guide-outer">
+                <h1 class="title">table, board</h1>
+
+                <p class="option">table type1 (게시판 목록)</p>
+                <!-- table -->
+                <table class="table table-type1">
+                    <colgroup>
+                        <col style="width: 12%" />
+                        <col style="width: auto" />
+                        <col style="width: 12%" />
+                        <col style="width: 12%" />
+                        <col style="width: 12%" />
+                        <col style="width: 12%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">항목</th>
+                            <th scope="col">항목</th>
+                            <th scope="col">항목</th>
+                            <th scope="col">항목</th>
+                            <th scope="col">항목</th>
+                            <th scope="col">항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>내용</td>
+                            <td><a href="#">게시판 상세페이지 이동</a></td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td><a href="#">게시판 상세페이지 이동</a></td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td><a href="#">게시판 상세페이지 이동</a></td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">데이터가 없습니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- //table -->
+                <!-- paging -->
+                <div class="paging">
+                    <ul class="pagination pagination-lg">
+                        <li class="page-item disabled">
+                            <a class="page-link arrow" href="#"
+                                ><i class="bi bi-chevron-double-left"><span class="skip">첫 페이지</span></i></a
+                            >
+                        </li>
+                        <li class="page-item disabled">
+                            <a class="page-link arrow" href="#"
+                                ><i class="bi bi-chevron-left"><span class="skip">이전페이지</span></i></a
+                            >
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                        <li class="page-item"><a class="page-link" href="#">8</a></li>
+                        <li class="page-item"><a class="page-link" href="#">9</a></li>
+                        <li class="page-item">
+                            <a class="page-link arrow" href="#"
+                                ><i class="bi bi-chevron-right"><span class="skip">다음페이지</span></i></a
+                            >
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link arrow" href="#"
+                                ><i class="bi bi-chevron-double-right"><span class="skip">마지막 페이지</span></i></a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <!-- //paging -->
+
+                <p class="option">table type2 (테이블, 게시판 상세&등록)</p>
+                <!-- table -->
+                <table class="table table-type2">
+                    <colgroup>
+                        <col style="width: 20%" />
+                        <col style="width: auto" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">항목</th>
+                            <td>내용</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- //table -->
+                <!-- table -->
+                <table class="table table-type2 text-center line">
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>항목</th>
+                            <th>항목</th>
+                            <th>항목</th>
+                            <th>항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                            <td>내용</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- //table -->
+            </div>
+
+            <!-- guide -->
+            <!-- <div class="guide-outer">
+            <h1 class="title">ㅇㅇ</h1>
+
+            <p class="option">ㅇㅇ</p> 
+            내용
+        </div> -->
+        </div>
+    </body>
+</html>
